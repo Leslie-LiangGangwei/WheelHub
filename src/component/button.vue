@@ -60,19 +60,16 @@ export default {
         fill: var(--border-color);
       }
     }
-
   &.icon-right {
     .content {
       order: 1;
     }
-
     .g-icon {
       order: 2;
       margin-left: .2em;
       margin-right: 0;
     }
   }
-
   .loading {
     animation: spin 0.8s infinite linear;
     order: 0 !important;
