@@ -14,7 +14,7 @@ export default {
 .g-icon {
   width: 1em;
   height: 1em;
-  margin-right: .1em;
+  margin-right: .2em;
   fill: var(--font-size)
 }
 </style>
