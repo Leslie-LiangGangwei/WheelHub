@@ -1,8 +1,6 @@
 <template>
   <button class="g-button" :class=`icon-${iconPosition}`>
-    <svg v-if='icon' class="icon" aria-hidden="true">
-      <use :xlink:href=`#icon-${icon}`></use>
-    </svg>
+    <g-icon v-if='icon' :name='icon'></g-icon>
     <slot></slot>
   </button>
 </template>
@@ -35,39 +33,29 @@ export default {
     border: 1px solid var(--border-color);
     background: var(--button-bg);
     outline: none;
-
     &:hover {
       color: var(--button-bg);
       border-color: var(--border-color-hover);
       background: var(--button-hover-bg);
 
-      .icon {
+      .g-icon {
         fill: var(--button-bg);
       }
     }
-
     &:active {
       color: var(--border-color);
       background: var(--button-active-bg);
 
-      .icon {
+      .g-icon {
         fill: var(--border-color);
       }
     }
-
     &.icon-right {
-      .icon {
+      .g-icon {
         order: 2;
         margin-left: .1em;
         margin-right: 0;
       }
-    }
-
-    .icon {
-      width: 1em;
-      height: 1em;
-      margin-right: .1em;
-      fill: var(--font-size)
     }
   }
 </style>

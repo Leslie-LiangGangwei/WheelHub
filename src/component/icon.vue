@@ -1,11 +1,20 @@
 <template>
-  <svg v-if='icon' class="icon" aria-hidden="true">
-    <use :xlink:href=`#icon-${icon}`></use>
+  <svg class="g-icon" aria-hidden="true">
+    <use :xlink:href=`#icon-${name}`></use>
   </svg>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['name']
+}
 </script>
 
-<style></style>
+<style lang="scss">
+.g-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: .1em;
+  fill: var(--font-size)
+}
+</style>
