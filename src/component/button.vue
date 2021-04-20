@@ -43,33 +43,40 @@ export default {
   padding: 0 1em;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
-    background: var(--button-bg);
-    outline: none;
-    &:hover {
-      color: var(--button-bg);
-      border-color: var(--border-color-hover);
-      background: var(--button-hover-bg);
-      .g-icon {
-        fill: var(--button-bg);
-      }
+  background: var(--button-bg);
+  outline: none;
+
+  &:hover {
+    color: var(--button-bg);
+    border-color: var(--border-color-hover);
+    background: var(--button-hover-bg);
+
+    .g-icon {
+      fill: var(--button-bg);
     }
-    &:active {
-      color: var(--border-color);
-      background: var(--button-active-bg);
-      .g-icon {
-        fill: var(--border-color);
-      }
+  }
+
+  &:active {
+    color: var(--border-color);
+    background: var(--button-active-bg);
+
+    .g-icon {
+      fill: var(--border-color);
     }
+  }
+
   &.icon-right {
     .content {
       order: 1;
     }
+
     .g-icon {
       order: 2;
       margin-left: .2em;
       margin-right: 0;
     }
   }
+
   .loading {
     animation: spin 0.8s infinite linear;
     order: 0 !important;
