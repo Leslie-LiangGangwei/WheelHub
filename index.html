@@ -38,7 +38,7 @@
 <div id="app">
     <g-button>button</g-button>
     <g-button icon="setting" icon-position="right">button</g-button>
-    <g-button icon="download">button</g-button>
+    <g-button icon="download" :loading="isLoading" @click="isLoading = !isLoading">button</g-button>
 </div>
 <script src="./src/app.js"></script>
 <script src="//at.alicdn.com/t/font_2497148_52l52s5p2i9.js"></script>
