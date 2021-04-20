@@ -9,7 +9,16 @@
 
 <script>
 export default {
-  props: ['icon', 'iconPosition']
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        return !(value !== 'left' && value !== 'right');
+      }
+    }
+  }
 }
 </script>
 
@@ -49,6 +58,8 @@ export default {
     &.icon-right {
       .icon {
         order: 2;
+        margin-left: .1em;
+        margin-right: 0;
       }
     }
 
