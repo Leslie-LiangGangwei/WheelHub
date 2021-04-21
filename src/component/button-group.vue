@@ -5,7 +5,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLowerCase()
+      if (name !== 'button') {
+        console.warn(`g-button-group 的子元素只能为 g-button，但是你设置的为 ${name}`)
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -26,7 +35,6 @@ export default {}
       border-bottom-right-radius: var(--border-radius);
     }
     &:hover {
-      position: relative;
       z-index: 1;
       border-color: var(--button-hover-bg);
     }
