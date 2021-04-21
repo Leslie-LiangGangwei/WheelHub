@@ -18,7 +18,7 @@
             --font-size: 14px;
             --button-bg: #fff;
             --button-hover-bg: #666;
-            --border-color-active: #666;
+            --border-color-active: #eee;
             --button-active-bg: #eee;
             --border-radius: 4px;
             --color: #999;
@@ -39,8 +39,13 @@
     <g-button>button</g-button>
     <g-button icon="setting" icon-position="right">button</g-button>
     <g-button icon="download" :loading="isLoading" @click="isLoading = !isLoading">button</g-button>
+    <g-button-group>
+        <g-button icon="left">button</g-button>
+        <g-button>更多</g-button>
+        <g-button icon="right" icon-position="right">button</g-button>
+    </g-button-group>
 </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_2497148_52l52s5p2i9.js"></script>
+<script src="//at.alicdn.com/t/font_2497148_l2g4lw7cbns.js"></script>
 </body>
 </html>
