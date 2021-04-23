@@ -10,7 +10,7 @@ Vue.component('g-button-group', ButtonGroup)
 new Vue({
     el: '#app',
     data: {
-        isLoading: false
+        isLoading: true
     }
 })
 
@@ -20,7 +20,7 @@ import spies from 'chai-spies'
 
 chai.use(spies)
 
-// 检测 normal button, setting
+// 检测 normal button 含有 setting
 const expect = chai.expect
 {
     const Constructor = Vue.extend(Button)
