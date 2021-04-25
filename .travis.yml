@@ -1,5 +1,5 @@
 language: "node.js"
-node_js:
+node.js:
   - "14"
 addons:
   chrome: stable
