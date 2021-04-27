@@ -1,6 +1,6 @@
 {
   "name": "wheelhub",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "这是一个 VUE UI 框架",
   "main": "dist/index.js",
   "scripts": {
