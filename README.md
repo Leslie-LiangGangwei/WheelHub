@@ -39,14 +39,14 @@
 
 3. 引用 WheelHub
 
-```
-import { Button, ButtonGroup, Icon } from "wheelhub";
-import 'wheelhub/dist/index.css'
-
-Vue.component("g-button", Button);
-Vue.component("g-button-group", ButtonGroup);
-Vue.component("g-icon", Icon);
-```
+   ```
+   import { Button, ButtonGroup, Icon } from "wheelhub";
+   import 'wheelhub/dist/index.css'
+   
+   Vue.component("g-button", Button);
+   Vue.component("g-button-group", ButtonGroup);
+   Vue.component("g-icon", Icon);
+   ```
 
 ## 文档
 
