@@ -40,6 +40,7 @@
 3. 引用 WheelHub
 
    ```
+   // main.js 文件中引用
    import { Button, ButtonGroup, Icon } from "wheelhub";
    import 'wheelhub/dist/index.css'
    
