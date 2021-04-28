@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Leslie-LiangGangwei/WheelHub#readme",
   "dependencies": {
+    "open": "^8.0.7",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },
