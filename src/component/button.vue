@@ -69,8 +69,6 @@ export default {
     .g-icon {order: 2;margin-left: .2em; margin-right: 0;
     }
   }
-  .loading {
-    animation: spin 0.8s infinite linear;
-  }
+  .loading {animation: spin 0.8s infinite linear;}
 }
 </style>

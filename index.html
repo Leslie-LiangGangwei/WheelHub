@@ -6,46 +6,55 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WheelHub</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+    <style lang="scss">
+      * {padding: 0;margin: 0;box-sizing: border-box;}
 
-        :root {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: #fff;
-            --button-hover-bg: #666;
-            --border-color-active: #eee;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #999;
-            --border-color: #999;
-        }
+      :root {
+        --button-height: 32px;
+        --font-size: 14px;
+        --button-bg: #fff;
+        --button-hover-bg: #666;
+        --border-color-active: #eee;
+        --button-active-bg: #eee;
+        --border-radius: 4px;
+        --color: #999;
+        --border-color: #999;
+      }
 
-        #app {
-            margin: 20px;
-        }
+      #app {margin: 20px;}
 
-        body {
-            font-size: var(--font-size);
-        }
+      body {font-size: var(--font-size);}
     </style>
 </head>
 <body>
 <div id="app">
-    <g-button>button</g-button>
-    <g-button disabled>button</g-button>
-    <g-button icon="setting" icon-position="right">button</g-button>
-    <g-button icon="download">button</g-button>
-    <g-button icon="setting" :loading="isLoading" @click="isLoading = !isLoading">button</g-button>
-    <g-button-group>
-        <g-button icon="left">button</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">button</g-button>
-    </g-button-group>
+    <div style="margin: 20px">
+        <div style="margin-top:10px">
+            <g-button>button</g-button>
+            <g-button disabled>button</g-button>
+            <g-button icon="setting" icon-position="right">button</g-button>
+            <g-button icon="download">button</g-button>
+            <g-button icon="setting" :loading="isLoading" @click="isLoading = !isLoading">button</g-button>
+        </div>
+        <div style="margin-top:10px">
+            <g-button-group>
+                <g-button icon="left">button</g-button>
+                <g-button>更多</g-button>
+                <g-button icon="right" icon-position="right">button</g-button>
+            </g-button-group>
+        </div>
+    </div>
+    <div style="margin: 20px">
+        <div style="margin-top:10px">
+            <g-input value="normal"></g-input>
+            <g-input value="disabled" disabled></g-input>
+            <g-input value="readonly" readonly></g-input>
+        </div>
+        <div style="margin-top:10px">
+            <g-input value="error" error="Input do not match."></g-input>
+        </div>
+    </div>
+
 </div>
 <script src="./src/app.js"></script>
 <script src="src/icon/iconfont.js"></script>
