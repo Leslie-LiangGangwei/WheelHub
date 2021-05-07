@@ -20,6 +20,17 @@ describe('Button', () => {
         expect(useElement.getAttribute('xlink:href')).to.equal('#icon-settings')
         vm.$destroy()
     })
+    it('button 可以设置 disabled.', () => {
+        const Constructor = Vue.extend(Button)
+        const vm = new Constructor({
+            propsData: {
+                disabled: true
+            }
+        }).$mount()
+        const useElement = vm.$el
+        expect(useElement.getAttribute('disabled')).to.equal('disabled')
+        vm.$destroy()
+    })
     it('可以设置loading.', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
