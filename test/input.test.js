@@ -55,17 +55,30 @@ describe('Input', () => {
             expect(errorMessage.innerHTML).to.equal('Input do not match.')
         })
     })
-    // it('点击 button 触发 click 事件', () => {
-    //     const Constructor = Vue.extend(Button)
-    //     const vm = new Constructor({
-    //         propsData: {
-    //             icon: 'settings',
-    //         }
-    //     }).$mount()
-    //
-    //     const callback = sinon.fake();
-    //     vm.$on('click', callback)
-    //     vm.$el.click()
-    //     expect(callback).to.have.been.called
-    // })
+
+    describe('事件', () => {
+        const Constructor = Vue.extend(Input)
+        let vm
+        afterEach(() => {
+            vm.$destroy()
+        })
+        it('支持 change/input/focus/blur 事件', () => {
+            ['change', 'input', 'focus', 'blur'].forEach((eventName) => {
+                vm = new Constructor({}).$mount()
+                const callback = sinon.fake();
+                vm.$on(eventName, callback)
+                // 触发 input 的 change/input/focus/blur 事件
+                let event = new Event(eventName);
+                // 将 event.target.value 的值添加到 event 中
+                Object.defineProperty(
+                    event, 'target', {
+                        value: {value: 'value'}, enumerable: true
+                    }
+                )
+                let inputElement = vm.$el.querySelector('input')
+                inputElement.dispatchEvent(event)
+                expect(callback).to.have.been.calledWith('value')
+            })
+        })
+    })
 })
