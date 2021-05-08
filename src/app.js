@@ -12,6 +12,6 @@ Vue.component('g-input', Input)
 new Vue({
     el: '#app',
     data: {
-        isLoading: true
+        isLoading: true,
     }
 })
