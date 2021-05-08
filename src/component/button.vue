@@ -1,6 +1,8 @@
 <!--suppress ALL -->
 <template>
-  <button class="g-button" :class=`icon-${iconPosition}` @click=$emit('click') :disabled="disabled">
+  <button class="g-button" :class=`icon-${iconPosition}` :disabled="disabled"
+          @click=$emit('click')
+  >
     <g-icon v-if="loading" name='loading' class="loading"></g-icon>
     <g-icon v-if='icon && !loading' :name='icon'></g-icon>
     <div class="content">
