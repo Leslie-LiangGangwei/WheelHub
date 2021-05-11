@@ -1,6 +1,5 @@
 # WheelHub Vue UI 组件库
 
-![npm](https://img.shields.io/npm/v/wheelhub)
 [![Build Status](https://travis-ci.com/Leslie-LiangGangwei/WheelHub.svg?branch=main)](https://travis-ci.com/Leslie-LiangGangwei/WheelHub)
 ## 介绍
 
