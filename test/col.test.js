@@ -1,5 +1,3 @@
-import col from "../src/component/col";
-
 const expect = chai.expect;
 import Vue from 'vue'
 import Col from '../src/component/col'
