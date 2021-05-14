@@ -1,5 +1,3 @@
-import Input from "../src/component/input";
-
 const expect = chai.expect;
 import Vue from 'vue'
 import Row from '../src/component/row'
