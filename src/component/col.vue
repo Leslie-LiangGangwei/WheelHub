@@ -42,7 +42,7 @@ export default {
         array.push(`col-${str}${obj.span}`)
       }
       if (obj.offset) {
-        array.push(`col-${str}${obj.offset}`)
+        array.push(`offset-${str}${obj.offset}`)
       }
       return array
     }
@@ -56,8 +56,7 @@ export default {
         ...this.createClass(narrowPc, 'narrow-pc-'),
         ...this.createClass(pc, 'pc-'),
         ...this.createClass(widePc, 'wide-pc-'),
-        ...this.createClass(biggestWidePc, 'narrow-pc-'),
-        ...this.createClass(narrowPc, 'biggest-wide-pc-'),
+        ...this.createClass(biggestWidePc, 'biggest-wide-pc-'),
       ]
     },
     colStyle() {
