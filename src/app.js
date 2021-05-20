@@ -34,7 +34,17 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('我是 Toast')
+            this.$toast('我是 Toast', {
+                autoClose: false,
+                showTime: 1,
+                toastButton: {
+                    text: 'Cancel',
+                    callback(toast) {
+                        console.log(toast);
+
+                    }
+                }
+            })
         }
     }
 })
