@@ -1,7 +1,12 @@
 <template>
-  <div class="toast">
-    <slot></slot>
-    <div v-if="toastButton" class="divider"></div>
+  <div class="toast" ref="toastRef">
+    <div class="text">
+      <div v-if="enableHtml" v-html="this.$slots.default"></div>
+      <div v-else>
+        <slot></slot>
+      </div>
+    </div>
+    <div v-if="toastButton" class="divider" ref="dividerRef"></div>
     <div v-if="toastButton" class="toastButton" @click="clickToastButton">
       {{ toastButton.text }}
     </div>
@@ -12,6 +17,10 @@
 export default {
   name: 'Toast',
   props: {
+    enableHtml: {
+      type: Boolean,
+      default: false
+    },
     autoClose: {
       type: Boolean,
       default: true
@@ -32,11 +41,8 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      if (this.autoClose) {
-        this.closeToast()
-      }
-    }, this.showTime * 1000)
+    this.updateDividerStyle()
+    this.toastAutoClose()
   },
   methods: {
     closeToast() {
@@ -48,6 +54,19 @@ export default {
       if (this.toastButton && typeof this.toastButton.callback === 'function') {
         this.toastButton.callback(this)
       }
+    },
+    updateDividerStyle() {
+      setTimeout(() => {
+        let toastHeight = this.$refs.toastRef.getBoundingClientRect().height
+        this.$refs.dividerRef.style.height = `${toastHeight}px`
+      }, 0)
+    },
+    toastAutoClose() {
+      setTimeout(() => {
+        if (this.autoClose) {
+          this.closeToast()
+        }
+      }, this.showTime * 1000)
     }
   }
 }
@@ -55,25 +74,28 @@ export default {
 
 <style lang="scss" scoped>
 $font-size: 14px;
-$toast-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.75);
 $toast-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+$toast-min-height: 40px;
 .toast {
-  font-size: $font-size; height: $toast-height; line-height: 1.8;
+  font-size: $font-size; line-height: 1.8; min-height: $toast-min-height;
   position: fixed; top: 0; left: 50%; transform: translateX(-50%);
   display: flex; align-items: center;
   border-radius: 4px;
   box-shadow: $toast-shadow;
   color: white;
   background: $toast-bg;
-  padding: 0 16px;
   .divider {
     height: 100%;
-    margin-right: 16px;
-    margin-left: 16px;
+    margin: 0 16px;
     border: 1px solid #666;
   }
+  .text {
+    margin-left: 16px;
+    padding: 16px 0;
+  }
   .toastButton {
+    margin-right: 16px;
   }
 }
 </style>

@@ -34,14 +34,13 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('我是 Toast', {
+            this.$toast('<strong>我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast</strong>', {
+                enableHtml: true,
                 autoClose: false,
                 showTime: 1,
                 toastButton: {
                     text: 'Cancel',
-                    callback(toast) {
-                        console.log(toast);
-
+                    callback() {
                     }
                 }
             })
