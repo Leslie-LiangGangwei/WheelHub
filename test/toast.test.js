@@ -45,6 +45,7 @@ describe('Toast', () => {
                     showTime: 1
                 }
             }).$mount(div)
+            console.log('因为异步加载，所以 style.height 没 get 到')
             vm.$on('toastClose', () => {
                 expect(document.body.contains(vm.$el)).to.eq(false)
                 done()
