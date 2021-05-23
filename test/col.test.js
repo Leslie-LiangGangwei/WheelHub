@@ -92,7 +92,6 @@ describe('Col', () => {
             }
         }).$mount(div)
         const colElement = vm.$el
-        console.log(colElement);
         expect(colElement.classList.contains('col-biggest-wide-pc-1')).to.equal(true)
         expect(colElement.classList.contains('offset-biggest-wide-pc-1')).to.equal(true)
         div.remove()
