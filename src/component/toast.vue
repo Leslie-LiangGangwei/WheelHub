@@ -61,6 +61,7 @@ export default {
   methods: {
     closeToast() {
       this.$el.remove()
+      this.$emit('toastClose')
       this.$destroy()
     },
     clickToastButton() {
