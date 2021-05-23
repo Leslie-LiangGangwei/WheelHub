@@ -1,14 +1,16 @@
 <template>
-  <div class="toast" ref="toastRef" :class="toastClass">
-    <div class="text">
-      <div v-if="enableHtml" v-html="this.$slots.default"></div>
-      <div v-else>
-        <slot></slot>
+  <div class="wrapper" :class="toastClass">
+    <div class="toast" ref="toastRef">
+      <div class="text">
+        <div v-if="enableHtml" v-html="this.$slots.default"></div>
+        <div v-else>
+          <slot></slot>
+        </div>
       </div>
-    </div>
-    <div v-if="toastButton" class="divider" ref="dividerRef"></div>
-    <div v-if="toastButton" class="toastButton" @click="clickToastButton">
-      {{ toastButton.text }}
+      <div v-if="toastButton" class="divider" ref="dividerRef"></div>
+      <div v-if="toastButton" class="toastButton" @click="clickToastButton">
+        {{ toastButton.text }}
+      </div>
     </div>
   </div>
 </template>
@@ -92,34 +94,65 @@ $font-size: 14px;
 $toast-bg: rgba(0, 0, 0, 0.75);
 $toast-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
 $toast-min-height: 40px;
-.toast {
-  font-size: $font-size; line-height: 1.8; min-height: $toast-min-height;
-  position: fixed; left: 50%;
-  display: flex; align-items: center;
-  border-radius: 4px;
-  box-shadow: $toast-shadow;
-  color: white;
-  background: $toast-bg;
+$animation-duration: 600ms;
+@keyframes slide-up {
+  0% {opacity: 0; transform: translateY(100%)}
+  100% {opacity: 1; transform: translateY(0%)}
+}
+
+@keyframes slide-down {
+  0% {opacity: 0; transform: translateY(-100%)}
+  100% {opacity: 1; transform: translateY(0%)}
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.wrapper {
+  position: fixed; left: 50%; transform: translateX(-50%);
   &.position-top {
-    top: 0; transform: translateX(-50%);
+    top: 0;
+    .toast {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      animation: slide-up $animation-duration;
+    }
   }
   &.position-bottom {
-    bottom: 0; transform: translateX(-50%);
+    bottom: 0;
+    .toast {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      animation: slide-down $animation-duration;
+    }
   }
   &.position-middle {
     top: 50%; transform: translate(-50%, -50%);
+    .toast {
+      animation: fade-in $animation-duration;
+    }
   }
-  .divider {
-    height: 100%;
-    margin: 0 16px;
-    border: 1px solid #666;
-  }
-  .text {
-    margin-left: 16px;
-    padding: 16px 0;
-  }
-  .toastButton {
-    margin-right: 16px;
+  .toast {
+    font-size: $font-size; line-height: 1.8; min-height: $toast-min-height;
+    display: flex; align-items: center;
+    border-radius: 4px;
+    box-shadow: $toast-shadow;
+    color: white;
+    background: $toast-bg;
+    .divider {
+      height: 100%;
+      margin: 0 16px;
+      border: 1px solid #666;
+    }
+    .text {
+      margin-left: 16px;
+      padding: 16px 0;
+    }
+    .toastButton {
+      margin-right: 16px;
+    }
   }
 }
 </style>
