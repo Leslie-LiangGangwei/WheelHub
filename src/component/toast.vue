@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" ref="toastRef">
+  <div class="toast" ref="toastRef" :class="toastClass">
     <div class="text">
       <div v-if="enableHtml" v-html="this.$slots.default"></div>
       <div v-else>
@@ -17,6 +17,13 @@
 export default {
   name: 'Toast',
   props: {
+    toastPosition: {
+      type: String,
+      default: 'top',
+      validator: function (value) {
+        return ['top', 'bottom', 'middle'].indexOf(value) !== -1
+      }
+    },
     enableHtml: {
       type: Boolean,
       default: false
@@ -37,6 +44,13 @@ export default {
             console.log(toast);
           }
         }
+      }
+    }
+  },
+  computed: {
+    toastClass() {
+      return {
+        [`position-${this.toastPosition}`]: true
       }
     }
   },
@@ -79,12 +93,21 @@ $toast-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
 $toast-min-height: 40px;
 .toast {
   font-size: $font-size; line-height: 1.8; min-height: $toast-min-height;
-  position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+  position: fixed; left: 50%;
   display: flex; align-items: center;
   border-radius: 4px;
   box-shadow: $toast-shadow;
   color: white;
   background: $toast-bg;
+  &.position-top {
+    top: 0; transform: translateX(-50%);
+  }
+  &.position-bottom {
+    bottom: 0; transform: translateX(-50%);
+  }
+  &.position-middle {
+    top: 50%; transform: translate(-50%, -50%);
+  }
   .divider {
     height: 100%;
     margin: 0 16px;

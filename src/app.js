@@ -35,6 +35,7 @@ new Vue({
     methods: {
         showToast() {
             this.$toast('<strong>我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast</strong>', {
+                toastPosition: 'middle',
                 enableHtml: true,
                 autoClose: false,
                 showTime: 1,
