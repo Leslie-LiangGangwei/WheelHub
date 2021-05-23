@@ -31,20 +31,18 @@ export default {
       default: false
     },
     autoClose: {
-      type: Boolean,
-      default: true
-    },
-    showTime: {
-      type: [String, Number],
-      default: 2
+      type: [Boolean, Number],
+      default: 2,
+      validator: function (value) {
+        return value === false || typeof value === 'number';
+      }
     },
     toastButton: {
       type: Object,
       default() {
         return {
-          text: "关闭", callback: (toast) => {
-            console.log(toast);
-          }
+          text: "关闭",
+          callback: undefined
         }
       }
     }
@@ -73,10 +71,10 @@ export default {
       }
     },
     updateDividerStyle() {
-      setTimeout(() => {
-        let toastHeight = this.$refs.toastRef.getBoundingClientRect().height
-        this.$refs.dividerRef.style.height = `${toastHeight}px`
-      }, 0)
+      this.$nextTick(() => {
+        this.$refs.dividerRef.style.height =
+            `${this.$refs.toastRef.getBoundingClientRect().height}px`
+      })
     },
     toastAutoClose() {
       setTimeout(() => {
