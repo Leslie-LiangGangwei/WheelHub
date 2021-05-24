@@ -20,8 +20,10 @@ describe('Toast', () => {
                 }
             }).$mount()
             expect(vm.$el.classList.contains('position-top')).to.eq(true)
-            vm.$el.remove()
-            vm.$destroy()
+            setTimeout(() => {
+                vm.$el.remove()
+                vm.$destroy()
+            }, 200)
         })
         it('接受 enableHtml', () => {
             const Constructor = Vue.extend(Toast)
@@ -33,8 +35,10 @@ describe('Toast', () => {
             vm.$slots.default = '<strong id="test">Hello World</strong>'
             vm.$mount()
             expect(vm.$el.querySelector('#test')).to.exist
-            vm.$el.remove()
-            vm.$destroy()
+            setTimeout(() => {
+                vm.$el.remove()
+                vm.$destroy()
+            }, 200)
         })
         it('接受 autoClose', (done) => {
             let div = document.createElement('div')
@@ -45,13 +49,15 @@ describe('Toast', () => {
                     showTime: 1
                 }
             }).$mount(div)
-            console.log('因为异步加载，所以 style.height 没 get 到')
             vm.$on('toastClose', () => {
                 expect(document.body.contains(vm.$el)).to.eq(false)
                 done()
+                div.remove()
+                vm.$el.remove()
+                vm.$destroy()
             })
         })
-        it('接受 toastButton', () => {
+        it('接受 toastButton', (done) => {
             const callback = sinon.fake();
             const Constructor = Vue.extend(Toast)
             const vm = new Constructor({
@@ -64,10 +70,13 @@ describe('Toast', () => {
             }).$mount()
             let toastButton = vm.$el.querySelector('.toastButton')
             expect(toastButton.innerHTML.trim()).to.eq('关闭')
-            toastButton.click()
-            expect(callback).to.have.been.called
-            vm.$el.remove()
-            vm.$destroy()
+            setTimeout(() => {
+                toastButton.click()
+                expect(callback).to.have.been.called
+                done()
+                vm.$el.remove()
+                vm.$destroy()
+            }, 200)
         })
     })
 })
