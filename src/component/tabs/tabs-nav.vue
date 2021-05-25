@@ -7,7 +7,11 @@
 
 <script>
 export default {
-  name: 'TabsNav'
+  name: 'TabsNav',
+  inject: ['eventBus'],
+  created: function () {
+    const {eventBus} = this;
+  }
 }
 </script>
 
