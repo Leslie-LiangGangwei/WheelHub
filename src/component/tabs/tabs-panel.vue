@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-panel">
+  <div class="tabs-panel" v-if="active">
     <slot></slot>
   </div>
 </template>
@@ -7,18 +7,27 @@
 <script>
 export default {
   name: 'TabsPanel',
+  data() {
+    return {
+      active: false,
+    }
+  },
+  props: {
+    name: {
+      type: [String, Number],
+      require: true
+    }
+  },
   inject: ['eventBus'],
   created: function () {
     const {eventBus} = this;
     eventBus.$on('update:selected', (name) => {
-      console.log(name);
+      this.active = name === this.name;
     })
   }
 }
 </script>
 
-<style>
-.tabs-panel {
-
-}
+<style lang="scss" scoped>
+.tabs-panel {}
 </style>

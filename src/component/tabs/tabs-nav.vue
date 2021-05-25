@@ -1,7 +1,9 @@
 <template>
   <div class="tabs-nav">
     <slot></slot>
-    <slot name="actions"></slot>
+    <div class="actions">
+      <slot name="actions"></slot>
+    </div>
   </div>
 </template>
 
@@ -15,8 +17,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .tabs-nav {
-
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  .actions {
+    margin-left: auto;
+  }
 }
 </style>
