@@ -11,7 +11,12 @@ import Content from './component/layout/content'
 import Footer from './component/layout/footer'
 import Sider from './component/layout/sider'
 import Toast from './component/toast'
-import toastPlugin from "./toastPlugin";
+import ToastPlugin from "./toastPlugin";
+import Tabs from './component/tabs/tabs'
+import TabsBody from './component/tabs/tabs-body'
+import TabsItem from './component/tabs/tabs-item'
+import TabsNav from './component/tabs/tabs-nav'
+import TabsPanel from './component/tabs/tabs-panel'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -25,26 +30,17 @@ Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
 Vue.component('g-toast', Toast)
-Vue.use(toastPlugin)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-nav', TabsNav)
+Vue.component('g-tabs-panel', TabsPanel)
+Vue.use(ToastPlugin)
 
 new Vue({
     el: '#app',
     data: {
-        isLoading: true,
+        selectedItem: 'sports'
     },
-    methods: {
-        showToast() {
-            this.$toast('<strong>我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast我是 Toast</strong>', {
-                toastPosition: 'middle',
-                enableHtml: true,
-                autoClose: false,
-                showTime: 1,
-                toastButton: {
-                    text: 'Cancel',
-                    callback() {
-                    }
-                }
-            })
-        }
-    }
+    methods: {}
 })
