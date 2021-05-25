@@ -47,8 +47,7 @@ export default {
 <style lang="scss" scoped>
 .tabs-item {
   padding: 0 2em;
-  &.active {
-    color: blue;
-  }
+  &:hover {cursor: pointer;}
+  &.active {color: blue;}
 }
 </style>
