@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="onClick" :class="activeClass">
+  <div class="tabs-item" @click="onClick" :class="Classes">
     <slot></slot>
   </div>
 </template>
@@ -24,9 +24,10 @@ export default {
     }
   },
   computed: {
-    activeClass() {
+    Classes() {
       return {
-        active: this.active
+        active: this.active,
+        disabled: this.disabled
       }
     }
   },
@@ -55,5 +56,10 @@ export default {
     color: #8AC2FF;
   }
   &.active {color: #007AFF;}
+  &.disabled {
+    color: #aaa;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 </style>
