@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     onClick() {
+      if (this.disabled) {return}
       const {eventBus} = this
       eventBus.$emit('update:selected', this.name, this)
     }
@@ -58,8 +59,9 @@ export default {
   &.active {color: #007AFF;}
   &.disabled {
     color: #aaa;
-    cursor: not-allowed;
-    pointer-events: none;
+    &:hover {
+      cursor: not-allowed;
+    }
   }
 }
 </style>
