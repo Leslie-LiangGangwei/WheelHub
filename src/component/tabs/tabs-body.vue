@@ -9,13 +9,13 @@ export default {
   name: 'TabsBody',
   inject: ['eventBus'],
   created: function () {
-    const {eventBus} = this;
   }
 }
 </script>
 
 <style>
 .tabs-body {
+  padding: 1em;
 
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="xxx" :class="activeClass">
+  <div class="tabs-item" @click="onClick" :class="activeClass">
     <slot></slot>
   </div>
 </template>
@@ -37,9 +37,9 @@ export default {
     })
   },
   methods: {
-    xxx() {
+    onClick() {
       const {eventBus} = this
-      eventBus.$emit('update:selected', this.name)
+      eventBus.$emit('update:selected', this.name, this)
     }
   }
 }
@@ -50,7 +50,10 @@ export default {
   align-items: center;
   padding: 0 2em;
   height: 100%;
-  &:hover {cursor: pointer;}
-  &.active {color: blue;}
+  &:hover {
+    cursor: pointer;
+    color: #8AC2FF;
+  }
+  &.active {color: #007AFF;}
 }
 </style>

@@ -33,7 +33,15 @@ export default {
     }
   },
   mounted() {
-    this.eventBus.$emit('update:selected', this.selected)
+    this.$children.forEach((tabsChild) => {
+      if (tabsChild.$options.name === 'TabsNav') {
+        tabsChild.$children.forEach((item) => {
+          if (item.name === this.selected && item.$options.name === 'TabsItem') {
+            this.eventBus.$emit('update:selected', this.selected, item)
+          }
+        })
+      }
+    })
   }
 }
 </script>
