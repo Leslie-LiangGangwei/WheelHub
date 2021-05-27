@@ -43,6 +43,10 @@ export default {
     }
   },
   mounted() {
+    if (this.$children.length === 0) {
+      console && console.warn
+      && console.warn('g-tabs 的 子组件应该是 g-tabsNav 和 g-tabsBody，而你没有输入正确的子组件')
+    }
     this.$children.forEach((tabsChild) => {
       if (tabsChild.$options.name === 'TabsNav') {
         tabsChild.$children.forEach((item) => {
