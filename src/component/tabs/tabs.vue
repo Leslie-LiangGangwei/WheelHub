@@ -37,7 +37,6 @@ export default {
       return this.direction === 'column';
     }
   },
-
   provide() {
     return {
       eventBus: this.eventBus
