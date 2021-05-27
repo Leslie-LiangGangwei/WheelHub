@@ -21,9 +21,11 @@ export default {
   inject: ['eventBus'],
   created: function () {
     const {eventBus} = this;
-    eventBus.$on('update:selected', (name) => {
-      this.active = name === this.name;
-    })
+    if (eventBus) {
+      eventBus.$on('update:selected', (name) => {
+        this.active = name === this.name;
+      })
+    }
   }
 }
 </script>

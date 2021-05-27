@@ -38,16 +38,21 @@ export default {
   },
   created: function () {
     const {eventBus} = this;
-    eventBus.$on('update:selected', (name, item, direction) => {
-      this.active = name === this.name;
-      this.direction = direction
-    })
+    if (eventBus) {
+      eventBus.$on('update:selected', (name, item, direction) => {
+        this.active = name === this.name;
+        this.direction = direction
+      })
+    }
   },
   methods: {
     onClick() {
       if (this.disabled) {return}
       const {eventBus} = this
-      eventBus.$emit('update:selected', this.name, this, this.direction)
+      if (eventBus) {
+        eventBus.$emit('update:selected', this.name, this, this.direction)
+      }
+      this.$emit('click', this)
     }
   }
 }
