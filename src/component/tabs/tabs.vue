@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs">
+  <div class="tabs" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -27,6 +27,17 @@ export default {
       eventBus: new Vue()
     }
   },
+  computed: {
+    classes() {
+      return {
+        column: this.isColumn
+      }
+    },
+    isColumn() {
+      return this.direction === 'column';
+    }
+  },
+
   provide() {
     return {
       eventBus: this.eventBus
@@ -37,7 +48,7 @@ export default {
       if (tabsChild.$options.name === 'TabsNav') {
         tabsChild.$children.forEach((item) => {
           if (item.name === this.selected && item.$options.name === 'TabsItem') {
-            this.eventBus.$emit('update:selected', this.selected, item)
+            this.eventBus.$emit('update:selected', this.selected, item, this.direction)
           }
         })
       }
@@ -46,8 +57,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .tabs {
-
+  &.column {
+    display: flex;
+  }
 }
 </style>

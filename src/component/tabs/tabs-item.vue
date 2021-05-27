@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="onClick" :class="Classes">
+  <div class="tabs-item" @click="onClick" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       active: false,
+      direction: ''
     }
   },
   props: {
@@ -24,24 +25,29 @@ export default {
     }
   },
   computed: {
-    Classes() {
+    classes() {
       return {
         active: this.active,
-        disabled: this.disabled
+        disabled: this.disabled,
+        column: this.isColumn
       }
+    },
+    isColumn() {
+      return this.direction === 'column';
     }
   },
   created: function () {
     const {eventBus} = this;
-    eventBus.$on('update:selected', (name) => {
+    eventBus.$on('update:selected', (name, item, direction) => {
       this.active = name === this.name;
+      this.direction = direction
     })
   },
   methods: {
     onClick() {
       if (this.disabled) {return}
       const {eventBus} = this
-      eventBus.$emit('update:selected', this.name, this)
+      eventBus.$emit('update:selected', this.name, this, this.direction)
     }
   }
 }
@@ -50,8 +56,12 @@ export default {
 .tabs-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 2em;
   height: 100%;
+  &.column {
+    padding: 0.5em 0;
+  }
   &:hover {
     cursor: pointer;
     color: #8AC2FF;

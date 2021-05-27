@@ -26,14 +26,11 @@
 </head>
 <body>
 <div id="app">
-    <g-tabs :selected.sync="selectedItem">
+    <g-tabs :selected.sync="selectedItem" direction="column">
         <g-tabs-nav>
             <g-tabs-item name="woman" disabled>美女</g-tabs-item>
             <g-tabs-item name="sports">运动</g-tabs-item>
             <g-tabs-item name="finance">财经</g-tabs-item>
-            <template slot="actions">
-                <button>button</button>
-            </template>
         </g-tabs-nav>
         <g-tabs-body>
             <g-tabs-panel name="woman">美女相关资讯</g-tabs-panel>
