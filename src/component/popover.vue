@@ -61,17 +61,38 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$border-color: #333;
+$border-radius: 4px;
 .popover {
   display: inline-block;
   position: relative;
-  .trigger {}
 }
 
 .content-wrapper {
   position: absolute;
   transform: translateY(-100%);
-  padding: 16px;
-  white-space: nowrap;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid $border-color;
+  margin-top: -10px;
+  padding: .5em 1em;
+  word-break: break-all;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+  background: white;
+  max-width: 20em;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+  }
+  &:before {
+    top: 100%;
+    border-top-color: $border-color;
+  }
+  &:after {
+    top: calc(100% - 1px);
+    border-top-color: white;
+  }
 }
 </style>
