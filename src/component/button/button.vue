@@ -40,6 +40,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$button-height: 32px;
+$font-size: 14px;
+$button-bg: #fff;
+$button-hover-bg: #666;
+$border-color-active: #eee;
+$button-active-bg: #eee;
+$border-radius: 4px;
+$color: #999;
+$border-color: #999;
 @keyframes spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
@@ -48,23 +57,23 @@ export default {
 .g-button {
   display: inline-flex;
   justify-content: center; align-items: center; vertical-align: middle;
-  font-size: var(--font-size); height: var(--button-height);
+  font-size: $font-size; height: $button-height;
   padding: 0 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   outline: none;
   &:hover {
-    color: var(--button-bg);border-color: var(--border-color-hover);background: var(--button-hover-bg);
-    .g-icon {fill: var(--button-bg);}
+    color: $button-bg; border-color: $button-hover-bg;background: $button-hover-bg;
+    .g-icon {fill: $button-bg;}
   }
   &:active {
-    color: var(--border-color);background: var(--button-active-bg);border-color: var(--font-size);
-    .g-icon {fill: var(--border-color);}
+    color: $border-color; background: $button-active-bg; border-color: $font-size;
+    .g-icon {fill: $border-color;}
   }
   &:disabled {
-    color: var(--border-color);background: var(--button-active-bg);border-color: var(--font-size);
-    .g-icon {fill: var(--border-color);}
+    color: $border-color; background: $button-active-bg; border-color: $font-size;
+    .g-icon {fill: $border-color;}
   }
   &.icon-right {
     .content {order: 1;}
