@@ -41,8 +41,6 @@ Vue.component('g-popover', Popover)
 
 new Vue({
     el: '#app',
-    data: {
-        selectedItem: 'sports'
-    },
+    data: {},
     methods: {}
 })
