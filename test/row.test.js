@@ -33,7 +33,6 @@ describe('Row', () => {
             vm.$el.remove()
             vm.$destroy()
         })
-
     })
     it('接受 justify 属性', () => {
         const div = document.createElement('div')
