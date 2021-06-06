@@ -46,22 +46,28 @@ export default {
     contentPosition() {
       const {contentWrapper, triggerWrapper} = this.$refs
       document.body.appendChild(contentWrapper)
-      let {top, left, right, bottom, height} = triggerWrapper.getBoundingClientRect()
-      if (this.position === 'top') {
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        contentWrapper.style.top = top + window.scrollY + 'px'
-      } else if (this.position === 'bottom') {
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        contentWrapper.style.top = bottom + window.scrollY + 'px'
-      } else if (this.position === 'left') {
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        let {height: contentHeight} = contentWrapper.getBoundingClientRect()
-        contentWrapper.style.top = top + window.scrollY + (height - contentHeight) / 2 + 'px'
-      } else if (this.position === 'right') {
-        contentWrapper.style.left = right + window.scrollX + 'px'
-        let {height: contentHeight} = contentWrapper.getBoundingClientRect()
-        contentWrapper.style.top = top + window.scrollY + (height - contentHeight) / 2 + 'px'
+      const {top, left, right, bottom, height} = triggerWrapper.getBoundingClientRect()
+      const {height: contentHeight} = contentWrapper.getBoundingClientRect()
+      let positions = {
+        top: {
+          left: left + window.scrollX,
+          top: top + window.scrollY,
+        },
+        bottom: {
+          left: left + window.scrollX,
+          top: bottom + window.scrollY,
+        },
+        left: {
+          left: left + window.scrollX,
+          top: top + window.scrollY + (height - contentHeight) / 2,
+        },
+        right: {
+          left: right + window.scrollX,
+          top: top + window.scrollY + (height - contentHeight) / 2,
+        }
       }
+      contentWrapper.style.left = positions[this.position].left + 'px'
+      contentWrapper.style.top = positions[this.position].top + 'px'
     },
     listenToDocument() {
       document.addEventListener('click', this.eventHandler)
