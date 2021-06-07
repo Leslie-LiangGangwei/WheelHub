@@ -30,6 +30,7 @@ describe('Row', () => {
             expect(getComputedStyle(col).paddingLeft).to.equal('8px')
             expect(getComputedStyle(col).paddingRight).to.equal('8px')
             done()
+            div.remove()
             vm.$el.remove()
             vm.$destroy()
         })
@@ -46,6 +47,7 @@ describe('Row', () => {
         const rowElement = vm.$el
         expect(getComputedStyle(rowElement).justifyContent).to.equal('center')
         div.remove()
+        vm.$el.remove()
         vm.$destroy()
     })
 })
