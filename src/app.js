@@ -18,6 +18,8 @@ import TabsItem from './component/tabs/tabs-item'
 import TabsNav from './component/tabs/tabs-nav'
 import TabsPanel from './component/tabs/tabs-panel'
 import Popover from './component/popover'
+import Collapse from './component/collapse/collapse'
+import CollapseItem from './component/collapse/collapse-item'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -38,6 +40,8 @@ Vue.component('g-tabs-nav', TabsNav)
 Vue.component('g-tabs-panel', TabsPanel)
 Vue.use(ToastPlugin)
 Vue.component('g-popover', Popover)
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
 
 new Vue({
     el: '#app',
