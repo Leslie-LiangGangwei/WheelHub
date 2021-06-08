@@ -1,6 +1,6 @@
 <template>
   <div class="collapse-item">
-    <div class="title" @click="open">
+    <div class="title" @click="toggle">
       {{ title }}
     </div>
     <div class="panel" v-if="showed">
@@ -13,6 +13,7 @@
 <script>
 export default {
   name: "Collapse-item",
+  inject: ['eventBus'],
   data() {
     return {
       showed: false
@@ -25,9 +26,26 @@ export default {
     }
   },
   methods: {
-    open() {
-      this.showed = !this.showed
+    toggle() {
+      if (this.showed) {
+        this.close()
+      } else {
+        this.showed = true
+        const {eventBus} = this;
+        eventBus.$emit('update:selected', this)
+      }
+    },
+    close() {
+      this.showed = false
     }
+  },
+  mounted() {
+    const {eventBus} = this;
+    eventBus.$on('update:selected', (vm) => {
+      if (vm !== this) {
+        this.close()
+      }
+    })
   }
 }
 </script>
