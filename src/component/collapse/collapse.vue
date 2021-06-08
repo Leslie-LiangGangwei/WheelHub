@@ -13,10 +13,21 @@ export default {
       eventBus: new Vue()
     }
   },
+  props: {
+    single: {
+      type: Boolean,
+      default: false
+    }
+  },
   provide() {
     return {
       eventBus: this.eventBus
     }
+  },
+  mounted() {
+    this.$children.forEach((vm) => {
+      vm.single = this.single
+    })
   }
 }
 </script>

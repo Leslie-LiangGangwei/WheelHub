@@ -16,7 +16,8 @@ export default {
   inject: ['eventBus'],
   data() {
     return {
-      showed: false
+      showed: false,
+      single: false
     }
   },
   props: {
@@ -43,7 +44,9 @@ export default {
     const {eventBus} = this;
     eventBus.$on('update:selected', (vm) => {
       if (vm !== this) {
-        this.close()
+        if (this.single) {
+          this.close()
+        }
       }
     })
   }
