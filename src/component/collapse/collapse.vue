@@ -6,6 +6,7 @@
 
 <script>
 import Vue from 'vue'
+
 export default {
   name: "Collapse",
   data() {
@@ -17,6 +18,9 @@ export default {
     single: {
       type: Boolean,
       default: false
+    },
+    selected: {
+      type: Array
     }
   },
   provide() {
@@ -25,8 +29,23 @@ export default {
     }
   },
   mounted() {
-    this.$children.forEach((vm) => {
-      vm.single = this.single
+    let {eventBus} = this
+    let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+    eventBus.$emit('update:selected', this.selected)
+    eventBus.$on('update:addSelected', (name) => {
+      if (this.single) {
+        selectedCopy = [name]
+      } else {
+        selectedCopy.push(name)
+      }
+      eventBus.$emit('update:selected', selectedCopy)
+      this.$emit('update:selected', selectedCopy)
+    })
+    eventBus.$on('update:removeSelected', (name) => {
+      let index = name.indexOf(selectedCopy)
+      selectedCopy.splice(index, 1)
+      eventBus.$emit('update:selected', selectedCopy)
+      this.$emit('update:selected', selectedCopy)
     })
   }
 }

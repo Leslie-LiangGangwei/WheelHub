@@ -6,7 +6,6 @@
     <div class="panel" v-if="showed">
       <slot></slot>
     </div>
-
   </div>
 </template>
 
@@ -17,37 +16,32 @@ export default {
   data() {
     return {
       showed: false,
-      single: false
     }
   },
   props: {
     title: {
       type: String,
       require: true
+    },
+    name: {
+      type: String
     }
   },
   methods: {
     toggle() {
       if (this.showed) {
-        this.close()
-      } else {
-        this.showed = true
         const {eventBus} = this;
-        eventBus.$emit('update:selected', this)
+        eventBus.$emit('update:removeSelected', this.name)
+      } else {
+        const {eventBus} = this;
+        eventBus.$emit('update:addSelected', this.name)
       }
-    },
-    close() {
-      this.showed = false
     }
   },
-  mounted() {
+  mounted: function () {
     const {eventBus} = this;
-    eventBus.$on('update:selected', (vm) => {
-      if (vm !== this) {
-        if (this.single) {
-          this.close()
-        }
-      }
+    eventBus.$on('update:selected', (selected) => {
+      this.showed = selected.indexOf(this.name) >= 0;
     })
   }
 }
