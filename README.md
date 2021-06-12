@@ -1,58 +1,32 @@
-# WheelHub Vue UI 组件库
+# WheelHub
 
 [![Build Status](https://travis-ci.com/Leslie-LiangGangwei/WheelHub.svg?branch=main)](https://travis-ci.com/Leslie-LiangGangwei/WheelHub)
-## 介绍
+> 这是基于 Vue 2 开发的前端 UI 框架
+>
+> 其中组件包括 icon、Button、Input、Grid、Layout、Toast、Tabs、Popover、Collapse
 
-这是我在学习 Vue 过程中做的 UI 框架，希望能帮到你
+项目仅供学习参考（请勿在生产环境中使用）
 
-## 开始使用
+### 技术栈
 
-1. 添加 CSS 样式 使用该框架前，需要将 CSS 设置
+```
+"vue": "2.6.14",
+"vuepress": "^1.8.2"
+```
 
-    ```
-    *, *::before, *::after{ box-sizing: border-box; }
-    ```
+### 打包工具
 
-   你还需要设置默认颜色等变量（后续会改为 SCSS 变量）
+```
+"parcel-bundler": "^1.12.5",
+```
 
-    ```
-    :root {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-bg: #fff;                
-        --button-hover-bg: #666;
-        --border-color-active: #eee;
-        --button-active-bg: #eee;
-        --border-radius: 4px;
-        --color: #999;
-        --border-color: #999;
-    }
-    ```
-   IE 15 及以上浏览器都支持此样式
+### 测试工具
 
-2. 安装 WheelHub
-    ```
-    yarn wheelhub
-    ```
-
-3. 引用 WheelHub
-
-   ```
-   // main.js 文件中引用
-   import { Button, ButtonGroup, Icon } from "wheelhub";
-   import 'wheelhub/dist/index.css'
-   
-   Vue.component("g-button", Button);
-   Vue.component("g-button-group", ButtonGroup);
-   Vue.component("g-icon", Icon);
-   ```
+```
+"chai": "^4.3.4",
+"sinon": "^10.0.0",
+"mocha": "^8.3.2",
+"karma": "^6.3.2",
+```
 
 ## 文档
-
-## 提问
-
-## 变更记录
-
-## 联系方式
-
-## 贡献代码
