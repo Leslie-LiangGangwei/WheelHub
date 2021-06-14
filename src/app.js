@@ -44,9 +44,5 @@ Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
 
 new Vue({
-    el: '#app',
-    data: {
-        selectedTab: ["1"]
-    },
-    methods: {}
+    el: '#app'
 })
