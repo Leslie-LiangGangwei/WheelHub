@@ -21,7 +21,9 @@ export default {
     },
     selected: {
       type: Array,
-      default: []
+      default: function () {
+        return []
+      }
     }
   },
   provide() {
