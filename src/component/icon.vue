@@ -4,10 +4,18 @@
   </svg>
 </template>
 
+
 <script>
+import '../icon/iconfont'
+
 export default {
   name: 'Icon',
-  props: ['name']
+  props: {
+    'name': {
+      type: String,
+      require: true,
+    }
+  }
 }
 </script>
 
