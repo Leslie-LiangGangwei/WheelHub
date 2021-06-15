@@ -20,10 +20,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color: #1C1C1C;
 .g-icon {
   width: 1em;
   height: 1em;
   margin-right: .2em;
-  fill: #000;
+  fill: $color;
 }
 </style>
