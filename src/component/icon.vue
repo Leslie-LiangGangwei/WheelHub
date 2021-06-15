@@ -6,7 +6,7 @@
 
 
 <script>
-import '../icon/iconfont'
+import '../icon/iconfont.js'
 
 export default {
   name: 'Icon',

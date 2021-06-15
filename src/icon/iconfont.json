@@ -1,0 +1,58 @@
+{
+  "id": "2497148",
+  "name": "WheelHub",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "141643",
+      "name": "error",
+      "font_class": "error",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "21131931",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "14112875",
+      "name": "左",
+      "font_class": "left",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "4685706",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "5532875",
+      "name": "点赞",
+      "font_class": "Tags",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "649425",
+      "name": "设置",
+      "font_class": "setting",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "13743948",
+      "name": "loading1",
+      "font_class": "loading",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    }
+  ]
+}
