@@ -40,7 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #1C1C1C;
 $button-height: 32px;
 $font-size: 14px;
 $button-bg: #fff;
@@ -48,7 +47,7 @@ $button-hover-bg: #666;
 $border-color-active: #eee;
 $button-active-bg: #eee;
 $border-radius: 4px;
-$color: #999;
+$color: #1C1C1C;
 $border-color: #999;
 @keyframes spin {
   0% {transform: rotate(0deg);}
