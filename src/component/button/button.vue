@@ -19,7 +19,9 @@ Vue.component('g-icon', Icon)
 export default {
   name: 'Button',
   props: {
-    icon: {},
+    icon: {
+      type: String,
+    },
     iconPosition: {
       type: String,
       default: "left",
