@@ -24,6 +24,6 @@ export default {
   width: 1em;
   height: 1em;
   margin-right: .2em;
-  fill: var(--font-size)
+  fill: #000;
 }
 </style>
