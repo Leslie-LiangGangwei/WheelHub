@@ -18,7 +18,7 @@ export default {
       type: String,
       default: 'row',
       validator(value) {
-        return ['row', 'column'].indexOf(value) !== -1
+        return ['row', 'column'].indexOf(value) >= 0
       }
     }
   },

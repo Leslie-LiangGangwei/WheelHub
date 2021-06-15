@@ -16,7 +16,7 @@ export default {
       type: String,
       validator: function (value) {
         // 这个值必须匹配下列字符串中的一个
-        return ['left', 'right', 'center'].indexOf(value) !== -1
+        return ['left', 'right', 'center'].indexOf(value) >= 0
       },
       default: 'center'
     }

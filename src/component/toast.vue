@@ -23,7 +23,7 @@ export default {
       type: String,
       default: 'top',
       validator: function (value) {
-        return ['top', 'bottom', 'middle'].indexOf(value) !== -1
+        return ['top', 'bottom', 'middle'].indexOf(value) >= 0
       }
     },
     enableHtml: {
