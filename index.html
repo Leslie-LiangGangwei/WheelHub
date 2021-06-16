@@ -14,14 +14,38 @@
 </head>
 <body>
 <div id="app" style="padding: 100px">
-    <g-collapse single>
-        <g-collapse-item title="title 1" name="1">panel 1</g-collapse-item>
-        <g-collapse-item title="title 2" name="2">panel 2</g-collapse-item>
-        <g-collapse-item title="title 3" name="3">panel 3</g-collapse-item>
-    </g-collapse>
-    <g-icon name='setting'></g-icon>
-    <g-button>111</g-button>
+
+    <g-row class="demoRow" :gutter="{iphone:8,ipad:16,narrowPc:24,pc:32}">
+        <g-col span="8" :ipad="{span: 16}">
+            <div class="demoCol">8</div>
+        </g-col>
+        <g-col span="8" :ipad="{span: 16}">
+            <div class="demoCol">8</div>
+        </g-col>
+        <g-col span="8" :ipad="{span: 16}">
+            <div class="demoCol">8</div>
+        </g-col>
+    </g-row>
+
 </div>
+<style scoped>
+    * {
+        box-sizing: border-box;
+    }
+
+    .demoRow {
+        margin: 10px 0;
+    }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 <script src="./src/app.js"></script>
 </body>
 </html>
