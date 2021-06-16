@@ -11,7 +11,7 @@ import Content from './component/layout/content'
 import Footer from './component/layout/footer'
 import Sider from './component/layout/sider'
 import Toast from './component/toast'
-import ToastPlugin from "./toastPlugin";
+import ToastPlugin from "./component/toastPlugin";
 import Tabs from './component/tabs/tabs'
 import TabsBody from './component/tabs/tabs-body'
 import TabsItem from './component/tabs/tabs-item'
