@@ -188,8 +188,8 @@ export default {
   $class-prefix-normal: gutter-;
   @for $n from 0 through 48 {
     &.#{$class-prefix-device}#{$n} {
-      margin-left: $n / 2 + px;
-      margin-right: $n / 2 + px;
+      padding-left: $n / 2 + px;
+      padding-right: $n / 2 + px;
     }
     &.#{$class-prefix-normal}#{$n} {
       padding-left: $n / 2 + px;
