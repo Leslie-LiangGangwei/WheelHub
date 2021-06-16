@@ -23,6 +23,9 @@ export default {
   methods: {
     gutterStyle(obj) {
       if (!obj) { return [] }
+      if ((typeof obj) === 'string' || (typeof obj) === 'number') {
+        return `gutter-${obj}`
+      }
       let array = []
       if (obj.iphone) {
         array.push(`gutter-iphone-${obj.iphone}`)
@@ -69,53 +72,58 @@ export default {
   &.justify-left { justify-content: flex-start; }
   &.justify-right { justify-content: flex-end; }
   &.justify-center { justify-content: center; }
-  $class-prefix: gutter-iphone-;
+  $class-prefix-device: gutter-iphone-;
+  $class-prefix-normal: gutter-;
   @for $n from 0 through 48 {
-    &.#{$class-prefix}#{$n} {
+    &.#{$class-prefix-device}#{$n} {
+      margin-left: - $n / 2 + px;
+      margin-right: - $n / 2 + px;
+    }
+    &.#{$class-prefix-normal}#{$n} {
       margin-left: - $n / 2 + px;
       margin-right: - $n / 2 + px;
     }
   }
   @media (min-width: 576px) {
-    $class-prefix: gutter-ipad-;
+    $class-prefix-device: gutter-ipad-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-left: - $n / 2 + px;
         margin-right: - $n / 2 + px;
       }
     }
   }
   @media (min-width: 768px) {
-    $class-prefix: gutter-narrow-pc-;
+    $class-prefix-device: gutter-narrow-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-left: - $n / 2 + px;
         margin-right: - $n / 2 + px;
       }
     }
   }
   @media (min-width: 992px) {
-    $class-prefix: gutter-pc-;
+    $class-prefix-device: gutter-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-left: - $n / 2 + px;
         margin-right: - $n / 2 + px;
       }
     }
   }
   @media (min-width: 1200px) {
-    $class-prefix: gutter-wide-pc-;
+    $class-prefix-device: gutter-wide-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-left: - $n / 2 + px;
         margin-right: - $n / 2 + px;
       }
     }
   }
   @media (min-width: 1600px) {
-    $class-prefix: gutter-biggest-wide-pc-;
+    $class-prefix-device: gutter-biggest-wide-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-left: - $n / 2 + px;
         margin-right: - $n / 2 + px;
       }

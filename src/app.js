@@ -20,7 +20,6 @@ import TabsPanel from './component/tabs/tabs-panel'
 import Popover from './component/popover'
 import Collapse from './component/collapse/collapse'
 import CollapseItem from './component/collapse/collapse-item'
-import AsyncComputed from 'vue-async-computed'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -43,7 +42,6 @@ Vue.use(ToastPlugin)
 Vue.component('g-popover', Popover)
 Vue.component('g-collapse', Collapse)
 Vue.component('g-collapse-item', CollapseItem)
-Vue.use(AsyncComputed)
 
 new Vue({
     el: '#app'

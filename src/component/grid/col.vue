@@ -5,10 +5,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import AsyncComputed from 'vue-async-computed'
-
-Vue.use(AsyncComputed)
 let validator = (value) => {
   let keys = Object.keys(value)
   let valid = true
@@ -22,6 +18,11 @@ let validator = (value) => {
 
 export default {
   name: 'Col',
+  data() {
+    return {
+      gutter: 0
+    }
+  },
   props: {
     span: {
       type: [String, Number]
@@ -49,6 +50,9 @@ export default {
     },
     gutterStyle(obj) {
       if (!obj) { return [] }
+      if ((typeof obj) === 'string' || (typeof obj) === 'number') {
+        return `gutter-${obj}`
+      }
       let array = []
       if (obj.iphone) {
         array.push(`gutter-iphone-${obj.iphone}`)
@@ -81,7 +85,7 @@ export default {
         ...this.createClass(pc, 'pc-'),
         ...this.createClass(widePc, 'wide-pc-'),
         ...this.createClass(biggestWidePc, 'biggest-wide-pc-'),
-        ...this.gutterStyle(gutter)
+        this.gutterStyle(gutter)
       ]
     },
     // colStyle() {
@@ -97,138 +101,143 @@ export default {
 
 <style lang="scss" scoped>
 .col {
-  $class-prefix: col-;
+  $class-prefix-device: col-;
   @for $n from 0 through 24 {
-    &.#{$class-prefix}#{$n} {
+    &.#{$class-prefix-device}#{$n} {
       width: percentage($n / 24);
     }
   }
-  $class-prefix: offset-;
+  $class-prefix-device: offset-;
   @for $n from 0 through 24 {
-    &.#{$class-prefix}#{$n} {
+    &.#{$class-prefix-device}#{$n} {
       margin-right: percentage($n / 24);
     }
   }
   @media (min-width: 576px) {
-    $class-prefix: col-ipad-;
+    $class-prefix-device: col-ipad-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         width: percentage($n / 24);
       }
     }
-    $class-prefix: offset-ipad-;
+    $class-prefix-device: offset-ipad-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-right: percentage($n / 24);
       }
     }
   }
   @media (min-width: 768px) {
-    $class-prefix: col-narrow-pc-;
+    $class-prefix-device: col-narrow-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         width: percentage($n / 24);
       }
     }
-    $class-prefix: offset-narrow-pc-;
+    $class-prefix-device: offset-narrow-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-right: percentage($n / 24);
       }
     }
   }
   @media (min-width: 992px) {
-    $class-prefix: col-pc-;
+    $class-prefix-device: col-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         width: percentage($n / 24);
       }
     }
-    $class-prefix: offset-pc-;
+    $class-prefix-device: offset-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-right: percentage($n / 24);
       }
     }
   }
   @media (min-width: 1200px) {
-    $class-prefix: col-wide-pc-;
+    $class-prefix-device: col-wide-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         width: percentage($n / 24);
       }
     }
-    $class-prefix: offset-wide-pc-;
+    $class-prefix-device: offset-wide-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-right: percentage($n / 24);
       }
     }
   }
   @media (min-width: 1600px) {
-    $class-prefix: col-biggest-wide-pc-;
+    $class-prefix-device: col-biggest-wide-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         width: percentage($n / 24);
       }
     }
-    $class-prefix: offset-biggest-wide-pc-;
+    $class-prefix-device: offset-biggest-wide-pc-;
     @for $n from 0 through 24 {
-      &.#{$class-prefix}#{$n} {
+      &.#{$class-prefix-device}#{$n} {
         margin-right: percentage($n / 24);
       }
     }
   }
   /* 计算 gutter 值 */
-  $class-prefix: gutter-iphone-;
+  $class-prefix-device: gutter-iphone-;
+  $class-prefix-normal: gutter-;
   @for $n from 0 through 48 {
-    &.#{$class-prefix}#{$n} {
+    &.#{$class-prefix-device}#{$n} {
       margin-left: $n / 2 + px;
       margin-right: $n / 2 + px;
     }
+    &.#{$class-prefix-normal}#{$n} {
+      padding-left: $n / 2 + px;
+      padding-right: $n / 2 + px;
+    }
   }
   @media (min-width: 576px) {
-    $class-prefix: gutter-ipad-;
+    $class-prefix-device: gutter-ipad-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: $n / 2 + px;
-        margin-right: $n / 2 + px;
+      &.#{$class-prefix-device}#{$n} {
+        padding-left: $n / 2 + px;
+        padding-right: $n / 2 + px;
       }
     }
   }
   @media (min-width: 768px) {
-    $class-prefix: gutter-narrow-pc-;
+    $class-prefix-device: gutter-narrow-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: $n / 2 + px;
-        margin-right: $n / 2 + px;
+      &.#{$class-prefix-device}#{$n} {
+        padding-left: $n / 2 + px;
+        padding-right: $n / 2 + px;
       }
     }
   }
   @media (min-width: 992px) {
-    $class-prefix: gutter-pc-;
+    $class-prefix-device: gutter-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: $n / 2 + px;
-        margin-right: $n / 2 + px;
+      &.#{$class-prefix-device}#{$n} {
+        padding-left: $n / 2 + px;
+        padding-right: $n / 2 + px;
       }
     }
   }
   @media (min-width: 1200px) {
-    $class-prefix: gutter-wide-pc-;
+    $class-prefix-device: gutter-wide-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: $n / 2 + px;
-        margin-right: $n / 2 + px;
+      &.#{$class-prefix-device}#{$n} {
+        padding-left: $n / 2 + px;
+        padding-right: $n / 2 + px;
       }
     }
   }
   @media (min-width: 1600px) {
-    $class-prefix: gutter-biggest-wide-pc-;
+    $class-prefix-device: gutter-biggest-wide-pc-;
     @for $n from 0 through 48 {
-      &.#{$class-prefix}#{$n} {
-        margin-left: $n / 2 + px;
-        margin-right: $n / 2 + px;
+      &.#{$class-prefix-device}#{$n} {
+        padding-left: $n / 2 + px;
+        padding-right: $n / 2 + px;
       }
     }
   }
