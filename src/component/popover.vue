@@ -114,8 +114,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$border-color: #333;
+$border-color: #aaa;
 $border-radius: 4px;
+$font-size: 14px;
 .popover {
   display: inline-block;
   position: relative;
@@ -129,6 +130,7 @@ $border-radius: 4px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
   background: white;
   max-width: 20em;
+  font-size: $font-size;
   &:before, &:after {
     content: '';
     display: block;

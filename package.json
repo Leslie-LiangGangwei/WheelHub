@@ -26,8 +26,9 @@
   },
   "homepage": "https://github.com/Leslie-LiangGangwei/WheelHub#readme",
   "dependencies": {
-    "node-sass": "^6.0.0",
-    "sass-loader": "^12.1.0",
+    "node-sass": "npm:sass",
+    "sass-loader": "^7.0.1",
+    "scss": "^0.2.4",
     "vue": "2.6.14",
     "vue-hot-reload-api": "^2.3.4"
   },
