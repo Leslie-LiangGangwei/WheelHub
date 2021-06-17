@@ -2,7 +2,7 @@
 title: icon
 ---
 
-# icon
+# icon 图标
 
 > icon 作为 WheelHub 最简单的组件，这样推荐使用 iconfont SVG
 
@@ -16,6 +16,8 @@ title: icon
 import "../iconfont.js";
 ```
 
+### 组件展示
+
 ### 代码
 
 ```
@@ -23,6 +25,20 @@ import "../iconfont.js";
 // 更换 'iconName' 即可
 ```
 
-<ClientOnly><icon/></ClientOnly>
+### 默认样式(可自行调整)
 
+```
+$color: #1C1C1C;
+.g-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+  fill: $color;
+}
+```
 
+## Attributes
+
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| ---- | ---- | ---- | ---- | ---- | 
+| icon | 按钮图标 | String | iconfont 项目内 icon 名称 | ---- |
