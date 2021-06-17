@@ -32,7 +32,7 @@ export default {
     },
     autoClose: {
       type: [Boolean, Number],
-      default: 2,
+      default: 3,
       validator: function (value) {
         return value === false || typeof value === 'number';
       }
@@ -81,7 +81,7 @@ export default {
         if (this.autoClose) {
           this.closeToast()
         }
-      }, this.showTime * 1000)
+      }, this.autoClose * 1000)
     }
   }
 }
