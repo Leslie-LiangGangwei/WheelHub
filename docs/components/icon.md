@@ -10,13 +10,15 @@ title: icon
 
 ### 全局引用
 
-下载 `iconfont.js` 后，需要在 `main.js`（或是其他入口 js 文件）引用
+下载（你的项目）`iconfont.js` 后，需要在 `main.js`（或是其他入口 js 文件）引用
 
 ```
 import "../iconfont.js";
 ```
 
-### 组件展示
+### 展示
+
+<icon></icon>
 
 ### 代码
 

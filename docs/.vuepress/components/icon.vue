@@ -1,13 +1,21 @@
 <template>
-  <div>
-    <g-icon name="setting"></g-icon>
-  </div>
+  <component
+      v-if="dynamicComponent"
+      :is="dynamicComponent"
+  ></component>
 </template>
 
 <script>
-import GIcon from '../../../src/component/icon'
-
 export default {
-  components: {GIcon}
-};
+  data() {
+    return {
+      dynamicComponent: null
+    }
+  },
+  mounted() {
+    import('../../../src/component/icon').then(module => {
+      this.dynamicComponent = module.default
+    })
+  }
+}
 </script>
