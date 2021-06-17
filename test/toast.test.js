@@ -10,7 +10,6 @@ describe('Toast', () => {
     it('存在.', () => {
         expect(Toast).to.be.ok
     })
-
     describe('props', () => {
         it('接受 toastPosition', () => {
             const Constructor = Vue.extend(Toast)
