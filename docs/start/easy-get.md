@@ -9,8 +9,8 @@ title: 快速上手
 ### 引用
 
 ```
-import {Button} from 'wheelhub'
 import Vue from 'vue'
+import {Button} from 'wheelhub'
 
 new Vue({
   el: '#app',
