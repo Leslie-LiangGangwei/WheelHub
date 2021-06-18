@@ -2,11 +2,14 @@
   <component
       v-if="dynamicComponent"
       :is="dynamicComponent"
-  ></component>
+      :name="$attrs.name"
+  >
+  </component>
 </template>
 
 <script>
 export default {
+  name: "icon",
   data() {
     return {
       dynamicComponent: null
@@ -16,6 +19,7 @@ export default {
     import('../../../src/component/icon').then(module => {
       this.dynamicComponent = module.default
     })
+    console.log(this.$el)
   }
 }
 </script>
