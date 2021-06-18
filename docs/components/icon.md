@@ -18,7 +18,7 @@ import "../iconfont.js";
 
 ### 展示
 
-<icon></icon>
+<icon name='setting'></icon>
 
 ### 代码
 
@@ -41,6 +41,6 @@ $color: #1C1C1C;
 
 ## Attributes
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-| ---- | ---- | ---- | ---- | ---- | 
-| icon | 按钮图标 | String | iconfont 项目内 icon 名称 | ---- |
+| 参数 | 说明     | 类型   | 可选值                    | 默认值 |
+| ---- | -------- | ------ | ------------------------- | ------ |
+| icon | 按钮图标 | String | iconfont 项目内 icon 名称 | ----   |

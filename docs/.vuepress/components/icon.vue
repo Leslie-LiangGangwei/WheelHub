@@ -1,7 +1,8 @@
 <template>
   <component
-      v-if="dynamicComponent"
-      :is="dynamicComponent"
+    v-if="dynamicComponent"
+    :is="dynamicComponent"
+    :name="$attrs.name"
   ></component>
 </template>
 
@@ -9,13 +10,13 @@
 export default {
   data() {
     return {
-      dynamicComponent: null
-    }
+      dynamicComponent: null,
+    };
   },
   mounted() {
-    import('../../../src/component/icon').then(module => {
-      this.dynamicComponent = module.default
-    })
-  }
-}
+    import("../../../src/component/icon").then((module) => {
+      this.dynamicComponent = module.default;
+    });
+  },
+};
 </script>
