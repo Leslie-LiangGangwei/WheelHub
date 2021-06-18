@@ -45,5 +45,4 @@ Vue.component('g-collapse-item', CollapseItem)
 
 new Vue({
     el: '#app',
-    data: {},
 })

@@ -3,23 +3,20 @@
       v-if="dynamicComponent"
       :is="dynamicComponent"
       :name="$attrs.name"
-  >
-  </component>
+  ></component>
 </template>
 
 <script>
 export default {
-  name: "icon",
   data() {
     return {
-      dynamicComponent: null
-    }
+      dynamicComponent: null,
+    };
   },
   mounted() {
-    import('../../../src/component/icon').then(module => {
-      this.dynamicComponent = module.default
-    })
-    console.log(this.$el)
-  }
-}
+    import("../../../src/component/icon").then((module) => {
+      this.dynamicComponent = module.default;
+    });
+  },
+};
 </script>

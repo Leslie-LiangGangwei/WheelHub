@@ -17,7 +17,8 @@ import "../iconfont.js";
 ```
 
 ### 展示
-<icon name="setting"></icon>
+
+<icon name='setting'></icon>
 
 ### 代码
 
