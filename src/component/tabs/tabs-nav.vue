@@ -30,21 +30,21 @@ export default {
     const {eventBus} = this;
     eventBus.$on('update:selected', (name, item, direction) => {
           this.direction = direction
-          this.active = name === this.name;
           if (this.direction === 'row') {
             this.$nextTick(() => {
               let {width, left} = item.$el.getBoundingClientRect();
-              this.$refs.lineRef.style.left = `${left}px`
               this.$refs.lineRef.style.width = `${width}px`
+              let navLeft = item.$parent.$el.getBoundingClientRect().left
+              this.$refs.lineRef.style.left = left - navLeft + `px`
             })
           } else {
             this.$nextTick(() => {
               let {top, height} = item.$el.getBoundingClientRect();
               this.$refs.lineRef.style.height = `${height}px`
-              this.$refs.lineRef.style.top = `${top}px`
+              let navTop = item.$parent.$el.getBoundingClientRect().top
+              this.$refs.lineRef.style.top = top - navTop + `px`
             })
           }
-
         }
     )
   }
