@@ -4,6 +4,7 @@
       :is="dynamicComponent"
       :name="$attrs.name"
   ></component>
+
 </template>
 
 <script>

@@ -1,29 +1,35 @@
 ---
-title: icon
+title: icon 图标
 ---
 
 # icon 图标
 
 > icon 作为 WheelHub 最简单的组件，推荐使用 iconfont SVG 利于维护，提高性能。
 
-[iconfont 官网](https://www.iconfont.cn/)
+### 引用
 
-## 全局引用
+> 在 [iconfont 官网](https://www.iconfont.cn/) 下载（你的项目文件）`iconfont.js` 后
 
-下载（你的项目）`iconfont.js` 后，需要在 `main.js`（或是其他入口 js 文件）引用
+1. 需要在 `main.js`（或是其他入口 js 文件）引用
 
 ```
 import "../iconfont.js";
 ```
 
+2. 或者在 `index.html`
+
+```
+<script src="./src/icon/iconfont.js"></script>
+```
+
 ### icon 展示
 
 <p></p>
-<icon name='setting'></icon>
+<g-icon name='setting'></g-icon>
 <p></p>
-<icon name='download'></icon>
+<g-icon name='download'></g-icon>
 <p></p>
-<icon name='Tags'></icon>
+<g-icon name='Tags'></g-icon>
 <p></p>
 
 ### 使用
@@ -44,10 +50,10 @@ $color: #1c1c1c;
 }
 ```
 
-## Attributes
+### Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
-| icon | 图标名称(必填) | String | iconfont 项目内 icon 名称 | ---- |
+| icon | 图标名称(必填) | String | ---- | ---- |
 
 

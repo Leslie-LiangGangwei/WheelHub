@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import "../src/icon/iconfont.js";
 import Button from './component/button/button'
 import Icon from './component/icon'
 import ButtonGroup from './component/button/button-group'
