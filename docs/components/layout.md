@@ -1,10 +1,10 @@
 ---
-title: Layout
+title: Layout 布局
 ---
 
 # Layout 布局
 
-## 设计建议
+### 设计建议
 
 > 一级导航项偏左靠近 logo 放置，辅助菜单偏右放置。
 
@@ -36,9 +36,31 @@ title: Layout
 
 * `Footer`：底部布局，自带默认样式，其下可嵌套任何元素，只能放在 `Layout` 中。
 
+### 引用
+
+```
+import Vue from 'vue'
+import {Layout, Header, Content, Footer, Sider} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-layout': Layout,
+        'g-header': Header,
+        'g-content': Content,
+        'g-footer': Footer,
+        'g-sider': Sider
+    }
+})
+```
+
 ### 组件展示
 
 #### 上-中-下 布局
+
+<p></p>
+<g-layout-normal></g-layout-normal>
+<p></p>
 
 ```
 <g-layout style="color: white; margin-bottom:50px;">
@@ -55,6 +77,10 @@ title: Layout
 ```
 
 #### 顶部-侧边布局-通栏
+
+<p></p>
+<g-layout-normal-sider></g-layout-normal-sider>
+<p></p>
 
 ```
 <g-layout style="color: white; margin-bottom:50px;">
@@ -76,6 +102,10 @@ title: Layout
 ```
 
 #### 侧边布局
+
+<p></p>
+<g-layout-sider-normal></g-layout-sider-normal>
+<p></p>
 
 ```
 <g-layout style="color: white; margin-bottom:50px;">
