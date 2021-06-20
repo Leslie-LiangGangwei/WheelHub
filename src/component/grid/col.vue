@@ -88,13 +88,6 @@ export default {
         this.gutterStyle(gutter)
       ]
     },
-    // colStyle() {
-    //   let {gutter} = this
-    //   return {
-    //     paddingLeft: gutter / 2 + 'px',
-    //     paddingRight: gutter / 2 + 'px'
-    //   }
-//    }
   }
 }
 </script>

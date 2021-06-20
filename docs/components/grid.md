@@ -1,26 +1,47 @@
 ---
-title: Grid
+title: Grid 栅格
 ---
 
 # Grid 栅格
-
 > 24 栅格系统
 
-## 设计理念
+### 设计理念
 
 > 布局的栅格化系统，我们是基于行 `row` 和列 `col` 来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：
 
 * 通过 `row` 在水平方向建立一组 `column`（简写 col）。
 
-    * 你的内容应当放置于 `col` 内，并且，只有 `col` 可以作为 `row` 的直接元素。
+  * 你的内容应当放置于 `col` 内，并且，只有 `col` 可以作为 `row` 的直接元素。
 
-    * 栅格系统中的列是指 `1 - 24` 的值来表示其跨越的范围。
+  * 栅格系统中的列是指 `1 - 24` 的值来表示其跨越的范围。
 
 * 我们的栅格化系统基于 Flex 布局
 
-    * 允许子元素在父节点内的水平对齐方式 - 居左、居中、居右，默认不换行、
+  * 允许子元素在父节点内的水平对齐方式 - 居左、居中、居右
+
+### 引用
+
+```
+import Vue from 'vue'
+import {Row, Col} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-row': Row,
+        'g-col': Col
+    }
+})
+```
 
 ### 普通用法
+
+<p></p>
+<g-grid-row-eight></g-grid-row-eight>
+<g-grid-row-six></g-grid-row-six>
+<g-grid-row-four></g-grid-row-four>
+<g-grid-row-two></g-grid-row-two>
+<p></p>
 
 ```
 <g-row class="demoRow">
@@ -73,14 +94,24 @@ title: Grid
 </style>
 ```
 
-### 适配 iPhone/iPad/PC
+### 适配 iPhone / iPad / PC
+
+> iPhone 界面下，`g-col` 栅格空间为 4，
+>
+> iPad 界面下，`g-col` 栅格空间为 8，
+>
+> PC 界面下，`g-col` 栅格空间为 24。
+
+<p></p>
+<g-grid-row-media></g-grid-row-media>
+<p></p>
 
 ```
 <g-row class="demoRow">
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
+    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '24'}"><div class="demoCol">8</div></g-col>
+    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '24'}"><div class="demoCol">8</div></g-col>
+    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '24'}"><div class="demoCol">8</div></g-col>
+    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '24'}"><div class="demoCol">8</div></g-col>
 </g-row>
 
 <style scoped>
@@ -100,15 +131,25 @@ title: Grid
 ```
 
 ### 设置 gutter
-
 #### gutter="16"
+
+<p></p>
+<g-grid-row-gutter-eight gutter="16"></g-grid-row-gutter-eight>
+<g-grid-row-gutter-six gutter="16"></g-grid-row-gutter-six>
+<g-grid-row-gutter-four gutter="16"></g-grid-row-gutter-four>
+<g-grid-row-gutter-two gutter="16"></g-grid-row-gutter-two>
+<p></p>
 
 ```
 <g-row class="demoRow" gutter="16">
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
+    <g-col span="6"><div class="demoCol">8</div></g-col>
+    <g-col span="6"><div class="demoCol">8</div></g-col>
+    <g-col span="6"><div class="demoCol">8</div></g-col>
+    <g-col span="4"><div class="demoCol">8</div></g-col>
+    <g-col span="4"><div class="demoCol">8</div></g-col>
+    <g-col span="4"><div class="demoCol">8</div></g-col>
+    <g-col span="4"><div class="demoCol">8</div></g-col>
+    <g-col span="4"><div class="demoCol">8</div></g-col>
 </g-row>
 
 <style scoped>
@@ -127,14 +168,23 @@ title: Grid
 </style>
 ```
 
-#### gutter="{iphone:'32', ipad:'16', pc:'8'}"
+#### gutter="{iphone:'0', ipad:'32', pc:'8'}"
+
+> iPhone 界面下，`gutter` 为 0px，
+>
+> iPad 界面下，`gutter` 为 32px，
+>
+> PC 界面下，`gutter` 为 8px。
+
+<p></p>
+<g-grid-row-media-gutter :gutter="{iphone:'0', ipad:'32', pc:'8'}"></g-grid-row-media-gutter>
+<p></p>
 
 ```
 <g-row class="demoRow" :gutter="{iphone:'32', ipad:'16', pc:'8'}">
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
-    <g-col span="4" :ipad="{span:'8'}" :pc="{span: '12'}"><div class="demoCol">8</div></g-col>
+    <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
+    <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
+    <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
 </g-row>
 
 <style scoped>
@@ -155,6 +205,10 @@ title: Grid
 
 ### 设置 offset
 
+<p></p>
+<g-grid-row-four-offset></g-grid-row-four-offset>
+<p></p>
+
 ```
 <g-row class="demoRow">
   <g-col span="4" ><div class="demoCol">4</div></g-col>
@@ -183,7 +237,7 @@ title: Grid
 </style>
 ```
 
-## Attributes
+### Attributes
 
 ### Row
 
@@ -201,4 +255,4 @@ title: Grid
 | ipad | 屏幕 >= `576px`，设置 `span`和`offset`的对象 | [Object] | ---- | ---- |
 | pc | 屏幕 >= `992px`，设置 `span`和`offset`的对象 | [Object] | ---- | ---- |
 | widePc | 屏幕 >= `1200px`，设置 `span`和`offset`的对象 | [Object] | ---- | ---- |
-| biggestWidePc | 屏幕 >= `1600px`，设置 `span`和`offset`的对象 | [Object] | ---- | ---- |
+| biggestWidePc | 屏幕 >= `1600px`，设置 `span`和`offset`的对象 | [Object] | ---- | ---- |<script><script>
