@@ -1,10 +1,9 @@
-<!--suppress ALL -->
 <template>
-  <button class="g-button" :class=`icon-${iconPosition}` :disabled="disabled"
-          @click=$emit('click')
+  <button class="g-button" :class="`icon-${iconPosition}`" :disabled="disabled"
+          @click="$emit('click')"
   >
-    <g-icon v-if="loading" name='loading' class="loading"></g-icon>
-    <g-icon v-if='icon && !loading' :name='icon'></g-icon>
+    <g-icon v-if="loading" name="loading" class="loading"></g-icon>
+    <g-icon v-if="icon && !loading" :name="icon"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -49,7 +48,7 @@ $button-hover-bg: #666;
 $border-color-active: #eee;
 $button-active-bg: #eee;
 $border-radius: 4px;
-$color: #1C1C1C;
+$color: #1c1c1c;
 $border-color: #999;
 @keyframes spin {
   0% {transform: rotate(0deg);}
