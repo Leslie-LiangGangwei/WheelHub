@@ -5,10 +5,10 @@
            :disabled="disabled"
            :readonly="readonly"
            :placeholder="placeholder"
-           @change=$emit('change',$event.target.value)
-           @input=$emit('input',$event.target.value)
-           @focus=$emit('focus',$event.target.value)
-           @blur=$emit('blur',$event.target.value)
+           @change="$emit('change',$event.target.value)"
+           @input="$emit('input',$event.target.value)"
+           @focus="$emit('focus',$event.target.value)"
+           @blur="$emit('blur',$event.target.value)"
     >
     <template v-if="error">
       <g-icon name="error" class="icon-error"></g-icon>
@@ -58,13 +58,15 @@ $border-color-hover: #007AFF;
 $border-color-disabled: #bbb;
 $border-radius: 4px;
 $font-size: 12px;
+$color: #1c1c1c;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
-$red: #F1453D;
+$red: #f1453D;
 $placeholder-color: #ccc;
 .wrapper {
   display: inline-flex; align-items: center; justify-content: center;
   :not(:last-child) {margin-right: .5em}
   input {
+    color: $color;
     height: $height;
     border: 1px solid $border-color; border-radius: $border-radius;
     padding: 0 8px;
@@ -79,7 +81,7 @@ $placeholder-color: #ccc;
       border-color: $border-color-disabled; color: $border-color-disabled;
       cursor: not-allowed;
     }
-    &:read-only { border-color: $border-color-disabled; color: $border-color-disabled;}
+    &:read-only { border-color: $border-color-disabled; color: $color;}
     &::placeholder {
       color: $placeholder-color;
       font-size: $font-size;
