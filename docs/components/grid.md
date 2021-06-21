@@ -37,10 +37,7 @@ new Vue({
 ### 普通用法
 
 <p></p>
-<g-grid-row-eight></g-grid-row-eight>
-<g-grid-row-six></g-grid-row-six>
-<g-grid-row-four></g-grid-row-four>
-<g-grid-row-two></g-grid-row-two>
+<g-grid-normal></g-grid-normal>
 <p></p>
 
 ```
@@ -103,7 +100,7 @@ new Vue({
 > PC 界面下，`g-col` 栅格空间为 24。
 
 <p></p>
-<g-grid-row-media></g-grid-row-media>
+<g-grid-media></g-grid-media>
 <p></p>
 
 ```
@@ -134,22 +131,42 @@ new Vue({
 #### gutter="16"
 
 <p></p>
-<g-grid-row-gutter-eight gutter="16"></g-grid-row-gutter-eight>
-<g-grid-row-gutter-six gutter="16"></g-grid-row-gutter-six>
-<g-grid-row-gutter-four gutter="16"></g-grid-row-gutter-four>
-<g-grid-row-gutter-two gutter="16"></g-grid-row-gutter-two>
+<g-grid-gutter></g-grid-gutter>
 <p></p>
 
 ```
 <g-row class="demoRow" gutter="16">
-    <g-col span="6"><div class="demoCol">8</div></g-col>
-    <g-col span="6"><div class="demoCol">8</div></g-col>
-    <g-col span="6"><div class="demoCol">8</div></g-col>
-    <g-col span="4"><div class="demoCol">8</div></g-col>
-    <g-col span="4"><div class="demoCol">8</div></g-col>
-    <g-col span="4"><div class="demoCol">8</div></g-col>
-    <g-col span="4"><div class="demoCol">8</div></g-col>
-    <g-col span="4"><div class="demoCol">8</div></g-col>
+  <g-col span="8"><div class="demoCol">8</div></g-col>
+  <g-col span="8"><div class="demoCol">8</div></g-col>
+  <g-col span="8"><div class="demoCol">8</div></g-col>
+</g-row>
+<g-row class="demoRow" gutter="16">
+  <g-col span="6"><div class="demoCol">6</div></g-col>
+  <g-col span="6"><div class="demoCol">6</div></g-col>
+  <g-col span="6"><div class="demoCol">6</div></g-col>
+  <g-col span="6"><div class="demoCol">6</div></g-col>
+</g-row>
+<g-row class="demoRow" gutter="16">
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+  <g-col span="4"><div class="demoCol">4</div></g-col>
+</g-row>
+<g-row class="demoRow" gutter="16">
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
+  <g-col span="2"><div class="demoCol">2</div></g-col>
 </g-row>
 
 <style scoped>
@@ -178,7 +195,7 @@ new Vue({
 
 
 <p></p>
-<g-grid-row-mediagutter></g-grid-row-mediagutter>
+<g-grid-mediagutter></g-grid-mediagutter>
 <p></p>
 
 ```
@@ -207,7 +224,7 @@ new Vue({
 ### 设置 offset
 
 <p></p>
-<g-grid-row-four-offset></g-grid-row-four-offset>
+<g-grid-offset></g-grid-offset>
 <p></p>
 
 ```
