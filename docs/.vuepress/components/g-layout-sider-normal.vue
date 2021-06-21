@@ -1,25 +1,41 @@
 <template>
-  <component
-      v-if="dynamicComponent"
-      :is="dynamicComponent"
-      class="hasSider"
-  >
-    <g-layout-sider-all></g-layout-sider-all>
-    <g-layout-normal></g-layout-normal>
-  </component>
+  <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <g-sider style=" background:#ddd; width:200px; color: black;">
+      sider
+    </g-sider>
+    <g-layout>
+      <g-header style="height: 50px; background:lightskyblue;">
+        header
+      </g-header>
+      <g-content style="height: 100px; background:deepskyblue;">
+        content
+      </g-content>
+      <g-footer style="height: 50px; background:lightskyblue;">
+        footer
+      </g-footer>
+    </g-layout>
+  </g-layout>
 </template>
 
+<style scoped>
+* {
+  box-sizing: border-box;
+}
+
+</style>
+
 <script>
+import GLayout from '../../../src/component/layout/layout'
+import GContent from '../../../src/component/layout/content'
+import GSider from '../../../src/component/layout/sider'
+import GHeader from '../../../src/component/layout/header'
+import GFooter from '../../../src/component/layout/footer'
+
+
 export default {
+  components: {GLayout, GContent, GSider, GHeader, GFooter},
   data() {
-    return {
-      dynamicComponent: null,
-    };
-  },
-  mounted() {
-    import("../../../src/component/layout/layout").then((module) => {
-      this.dynamicComponent = module.default;
-    });
-  },
-};
+    return {}
+  }
+}
 </script>
