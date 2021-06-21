@@ -3,11 +3,9 @@ title: Button 按钮
 ---
 
 # Button 按钮
-
 > Button 作为最常用的操作组件。
 
 ### 引用
-
 ```
 import Vue from 'vue'
 import {Button} from 'wheelhub'
@@ -21,7 +19,6 @@ new Vue({
 ```
 
 ### 基本用法
-
 <p></p>
 <g-button-normal></g-button-normal>
 <p></p>
@@ -31,7 +28,6 @@ new Vue({
 ```
 
 ### 禁用状态
-
 > 当前状态下 Button 不可选中
 
 <p></p>
@@ -43,7 +39,6 @@ new Vue({
 ```
 
 ### 图标按钮
-
 > 可在 Button 上添加 icon 位置（默认）于左侧，也可设置在右侧
 
 <p></p>
@@ -60,7 +55,6 @@ new Vue({
 ```
 
 ### 加载中
-
 <p></p>
 <g-button-loading loading disabled></g-button-loading>
 <p></p>
@@ -70,7 +64,6 @@ new Vue({
 ```
 
 ### 按钮组
-
 > 以按钮组的方式出现，常用于多项类似操作。
 
 <g-button-group></g-button-group>
@@ -83,7 +76,6 @@ new Vue({
 ```
 
 ### 事件监听
-
 > 可监测 click 事件，点击上传。
 
 <g-button-click></g-button-click>

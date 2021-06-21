@@ -1,11 +1,10 @@
 <template>
   <button class="g-button" :class="`icon-${iconPosition}`" :disabled="disabled"
-          @click="$emit('click')"
-  >
+          @click="$emit('click')">
     <g-icon v-if="loading" name="loading" class="loading"></g-icon>
     <g-icon v-if="icon && !loading" :name="icon"></g-icon>
-    <div class="content">
-      <slot></slot>
+    <div class="g-button-content">
+      <slot/>
     </div>
   </button>
 </template>
@@ -78,7 +77,7 @@ $border-color: #999;
     .g-icon {fill: $border-color;}
   }
   &.icon-right {
-    .content {order: 1;}
+    .g-button-content {order: 1;}
     .g-icon {order: 2;margin-left: .2em; margin-right: 0;
     }
   }
