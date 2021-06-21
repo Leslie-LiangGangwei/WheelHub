@@ -1,17 +1,14 @@
 ---
-title: Toast
+title: Toast 全局提示
 ---
 
 # Toast 全局提示
-
 > Toast 为全局展示操作反馈信息的组件。
 
-## 引入
-
+### 引入
 > 贯彻工程化思路，用户需要自动 `vue.ues(...)`调用插件后，才可使用。
 
 ### 需要在 app.js 调用
-
 ```
 import Vue from 'vue'
 import Toast from './component/toast'
@@ -31,28 +28,22 @@ new Vue({
 
 ### 基本用法
 
-> Toast 三秒后自动关闭
+> Toast 默认三秒后自动关闭
 
-```
-<div id="app">
-    <g-button @click="showToast">触发 Toast</g-button>
+<div style="display: flex;">
+<g-toast-top></g-toast-top><g-toast-bottom></g-toast-bottom><g-toast-middle></g-toast-middle>
 </div>
 
-new Vue({
-    el: '#app',
-    methods: {
-        showToast() { 
-            this.$toast('我是 Toast') 
-        }
-    }
-})
-```
-
 ### Toast 不同定位
-
 #### 默认定位（Top）
 
 ```
+<style>
+    .toast {
+      z-index: 30;
+    }
+</style>
+
 <div id="app">
     <g-button @click="showToast">触发 Toast</g-button>
 </div>
@@ -60,7 +51,7 @@ new Vue({
 new Vue({
     el: '#app',
     methods: {
-        showToast() { this.$toast('我是 Toast') }
+        showToast() { this.$toast('Top 弹出 Toast') }
     }
 })
 ```
@@ -68,6 +59,12 @@ new Vue({
 #### Bottom 定位
 
 ```
+<style>
+    .toast {
+      z-index: 30;
+    }
+</style>
+
 <div id="app">
     <g-button @click="showToast">触发 Toast</g-button>
 </div>
@@ -76,7 +73,7 @@ new Vue({
     el: '#app',
     methods: {
         showToast() { 
-            this.$toast('我是 Toast' ,{
+            this.$toast('Bottom 弹出 Toast' ,{
                 toastPosition: 'bottom'
             })
         }
@@ -87,6 +84,12 @@ new Vue({
 #### middle 定位
 
 ```
+<style>
+    .toast {
+      z-index: 30;
+    }
+</style>
+
 <div id="app">
     <g-button @click="showToast">触发 Toast</g-button>
 </div>
@@ -95,7 +98,7 @@ new Vue({
     el: '#app',
     methods: {
         showToast() {
-            this.$toast('我是 Toast' ,{
+            this.$toast('Middle 弹出 Toast' ,{
                 toastPosition: 'middle'
             })
         }
@@ -104,6 +107,10 @@ new Vue({
 ```
 
 ### Toast 启用 HTML
+
+<p></p>
+<g-toast-enableHtml></g-toast-enableHtml>
+<p></p>
 
 ```
 <div id="app">
@@ -128,6 +135,10 @@ new Vue({
 
 > 5 秒后关闭 Toast
 
+<p></p>
+<g-toast-autoClose></g-toast-autoClose>
+<p></p>
+
 ```
 <div id="app">
     <g-button @click="showToast">触发 Toast</g-button>
@@ -137,7 +148,7 @@ new Vue({
     el: '#app',
     methods: {
         showToast() { 
-            this.$toast('<strong>我是 Toast</strong>', {
+            this.$toast('Toast 5秒后关闭', {
                 autoClose: 5
             }) 
         }
@@ -147,6 +158,10 @@ new Vue({
 
 #### 不开启自动关闭
 
+<p></p>
+<g-toast-autoClose-false></g-toast-autoClose-false>
+<p></p>
+
 ```
 <div id="app">
     <g-button @click="showToast">触发 Toast</g-button>
@@ -156,7 +171,7 @@ new Vue({
     el: '#app',
     methods: {
         showToast() { 
-            this.$toast('<strong>我是 Toast</strong>', {
+            this.$toast('Toast 不开启自动关闭', {
                 autoClose: false
             }) 
         }
@@ -164,7 +179,11 @@ new Vue({
 })
 ```
 
-### Toast 添加 toastButton
+### Toast 可设置 toastButton 执行回调函数
+
+<p></p>
+<g-toast-toastButton></g-toast-toastButton>
+<p></p>
 
 ```
 <div id="app">
@@ -187,8 +206,7 @@ new Vue({
 })
 ```
 
-## Attributes
-
+### Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | message | toast 文案 | String | ---- | ---- | 

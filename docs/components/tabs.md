@@ -1,13 +1,39 @@
 ---
-title: Tabs
+title: Tabs 标签页
 ---
 
 # Tabs 标签页
+
 > 选择标签切换内容。
 
+### 引用
+
+```
+import Vue from 'vue'
+import {Tabs, TabsNav, TabsItem, TabsBody, TabsPanel} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-tabs': Tabs,
+        'g-tabs-nav': TabsNav,
+        'g-tabs-item': TabsItem,
+        'g-tabs-body': TabsBody,
+        'g-tabs-panel': TabsPanel
+    }
+})
+```
+
 ### 正常使用
+
 #### Tabs - row
+
 > Tabs 默认为"列(横)"展示
+
+<p></p>
+<g-tabs-row></g-tabs-row>
+<p></p>
+
 ```
 <g-tabs selected='1'>
     <g-tabs-nav>
@@ -24,7 +50,12 @@ title: Tabs
 ```
 
 #### Tabs - column
+
 > 通过 `direction`，将 Tabs 以"栏(竖)"展示
+
+<p></p>
+<g-tabs-column></g-tabs-column>
+<p></p>
 
 ```
 <g-tabs selected='1' direction="column">
@@ -43,6 +74,10 @@ title: Tabs
 
 ### 存在 Tabs-item 不可选中
 
+<p></p>
+<g-tabs-row-disabled></g-tabs-row-disabled>
+<p></p>
+
 ```
 <g-tabs selected='1'>
     <g-tabs-nav>
@@ -58,22 +93,23 @@ title: Tabs
 </g-tabs>
 ```
 
-## Attributes
-### Tabs
+### Attributes
+
+#### Tabs
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | selected | 默认选择 Tabs-item(必填)| String | ---- | ---- | 
 | direction | Tabs 定位 | String | row / column | row | 
 
-### Tabs-item
+#### Tabs-item
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | disabled | Tabs-item 是否能点击 | Boolean | true / false | false | 
 | name | 对应 selected(必填) | [String, Number] | ---- | ---- | 
 
-### Tabs-panel
+#### Tabs-panel
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

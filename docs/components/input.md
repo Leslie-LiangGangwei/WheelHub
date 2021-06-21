@@ -3,13 +3,11 @@ title: Input 输入框
 ---
 
 # Input 输入框
-
 > 通过鼠标或键盘输入字符
 >
 > 可通过 `input` 事件更新组件的绑定值，并支持 `v-model`
 
 ### 引用
-
 ```
 import Vue from 'vue'
 import {Input} from 'wheelhub'
