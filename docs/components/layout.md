@@ -3,9 +3,7 @@ title: Layout 布局
 ---
 
 # Layout 布局
-
 ### 设计建议
-
 > 一级导航项偏左靠近 logo 放置，辅助菜单偏右放置。
 
 * 顶部导航（大部分系统）：一级导航高度 `64px`，二级导航 `48px`
@@ -20,7 +18,6 @@ title: Layout 布局
 * 侧边导航宽度的范围计算公式：`200+8n`
 
 ### 组件概述
-
 > Layout 布局需要用到的组件
 >
 > `Layout`：布局容器，其下可嵌套 `Header` `Sider` `Content` `Footer` 或 `Layout` 本身，可以放在任何父容器中。
@@ -37,7 +34,6 @@ title: Layout 布局
 * `Footer`：底部布局，自带默认样式，其下可嵌套任何元素，只能放在 `Layout` 中。
 
 ### 引用
-
 ```
 import Vue from 'vue'
 import {Layout, Header, Content, Footer, Sider} from 'wheelhub'
@@ -55,7 +51,6 @@ new Vue({
 ```
 
 ### 组件展示
-
 #### 上-中-下 布局
 
 <p></p>
