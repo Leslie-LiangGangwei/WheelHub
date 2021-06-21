@@ -24,7 +24,6 @@ export default {
     import("../../../src/component/grid/col").then((module) => {
       this.dynamicComponent = module.default;
     });
-    console.log(this)
   },
 };
 </script>
