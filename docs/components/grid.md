@@ -176,12 +176,13 @@ new Vue({
 >
 > PC 界面下，`gutter` 为 8px。
 
+
 <p></p>
-<g-grid-row-media-gutter :gutter="{iphone:'0', ipad:'32', pc:'8'}"></g-grid-row-media-gutter>
+<g-grid-row-mediagutter></g-grid-row-mediagutter>
 <p></p>
 
 ```
-<g-row class="demoRow" :gutter="{iphone:'32', ipad:'16', pc:'8'}">
+<g-row class="demoRow" :gutter="{iphone:'0', ipad:'32', pc:'8'}">
     <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
     <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
     <g-col span="24" :ipad="{span:'12'}" :pc="{span: '8'}"><div class="demoCol">8</div></g-col>
