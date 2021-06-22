@@ -5,7 +5,7 @@ title: Button 按钮
 # Button 按钮
 > Button 作为最常用的操作组件。
 
-### 引用
+## 引用
 ```
 import Vue from 'vue'
 import {Button} from 'wheelhub'
@@ -18,7 +18,7 @@ new Vue({
 })
 ```
 
-### 基本用法
+## 基本用法
 <p></p>
 <g-button-normal></g-button-normal>
 <p></p>
@@ -27,7 +27,7 @@ new Vue({
 <g-button>基本用法</g-button>
 ```
 
-### 禁用状态
+## 禁用状态
 > 当前状态下 Button 不可选中
 
 <p></p>
@@ -38,7 +38,7 @@ new Vue({
 <g-button disabled>禁用状态</g-button>
 ```
 
-### 图标按钮
+## 图标按钮
 > 可在 Button 上添加 icon 位置（默认）于左侧，也可设置在右侧
 
 <p></p>
@@ -54,7 +54,7 @@ new Vue({
 <g-button icon="setting" icon-position="right">图标按钮</g-button>
 ```
 
-### 加载中
+## 加载中
 <p></p>
 <g-button-loading loading disabled></g-button-loading>
 <p></p>
@@ -63,7 +63,7 @@ new Vue({
 <g-button icon="loading" loading disabled>加载中</g-button>
 ```
 
-### 按钮组
+## 按钮组
 > 以按钮组的方式出现，常用于多项类似操作。
 
 <g-button-group></g-button-group>
@@ -75,7 +75,7 @@ new Vue({
 </g-button-group>
 ```
 
-### 事件监听
+## 事件监听
 > 可监测 click 事件，点击上传。
 
 <g-button-click></g-button-click>
@@ -104,7 +104,7 @@ new Vue({
 </script>
 ```
 
-### Attributes
+## Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

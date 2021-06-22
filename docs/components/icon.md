@@ -6,8 +6,10 @@ title: icon 图标
 
 > icon 作为 WheelHub 最简单的组件，推荐使用 iconfont SVG 利于维护，提高性能。
 
-### 引用
-#### iconfont.js 引用
+## 引用
+
+### iconfont.js 引用
+
 > 在 [iconfont 官网](https://www.iconfont.cn/) 下载（你的项目文件）`iconfont.js` 后
 
 1. 需要在 `main.js`（或是其他入口 js 文件）引用
@@ -36,8 +38,7 @@ new Vue({
 })
 ```
 
-### icon 展示
-
+## icon 展示
 <p></p>
 <g-icon name='setting'></g-icon>
 <p></p>
@@ -46,8 +47,7 @@ new Vue({
 <g-icon name='Tags'></g-icon>
 <p></p>
 
-### 使用
-
+## 使用
 ```
 <g-icon name='iconName'></g-icon>
 // 更换 'iconName' 即可
@@ -64,7 +64,7 @@ $color: #1c1c1c;
 }
 ```
 
-### Attributes
+## Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

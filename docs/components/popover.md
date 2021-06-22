@@ -6,7 +6,7 @@ title: Popover 气泡卡片
 
 > 点击元素，弹出气泡式的确认框。
 
-### 引用
+## 引用
 
 ```
 import Vue from 'vue'
@@ -20,7 +20,7 @@ new Vue({
 })
 ```
 
-### Click 触发
+## Click 触发
 
 <p></p>
 <g-popover-click></g-popover-click>
@@ -53,7 +53,7 @@ new Vue({
 </g-popover>
 ```
 
-### Hover 触发
+## Hover 触发
 
 <p></p>
 <g-popover-hover></g-popover-hover>
@@ -86,7 +86,7 @@ new Vue({
 </g-popover>
 ```
 
-### Attributes
+## Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

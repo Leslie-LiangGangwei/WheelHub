@@ -6,7 +6,7 @@ title: Tabs 标签页
 
 > 选择标签切换内容。
 
-### 引用
+## 引用
 
 ```
 import Vue from 'vue'
@@ -24,9 +24,7 @@ new Vue({
 })
 ```
 
-### 正常使用
-
-#### Tabs - row
+## Tabs - row
 
 > Tabs 默认为"列(横)"展示
 
@@ -49,7 +47,7 @@ new Vue({
 </g-tabs>
 ```
 
-#### Tabs - column
+## Tabs - column
 
 > 通过 `direction`，将 Tabs 以"栏(竖)"展示
 
@@ -72,7 +70,7 @@ new Vue({
 </g-tabs>
 ```
 
-### 存在 Tabs-item 不可选中
+## 存在 Tabs-item 不可选中
 
 <p></p>
 <g-tabs-row-disabled></g-tabs-row-disabled>
@@ -93,16 +91,16 @@ new Vue({
 </g-tabs>
 ```
 
-### Attributes
+## Attributes
 
-#### Tabs
+### Tabs
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | selected | 默认选择 Tabs-item(必填)| String | ---- | ---- | 
 | direction | Tabs 定位 | String | row / column | row | 
 
-#### Tabs-item
+### Tabs-item
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

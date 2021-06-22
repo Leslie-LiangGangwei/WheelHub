@@ -7,7 +7,7 @@ title: Input 输入框
 >
 > 可通过 `input` 事件更新组件的绑定值，并支持 `v-model`
 
-### 引用
+## 引用
 ```
 import Vue from 'vue'
 import {Input} from 'wheelhub'
@@ -20,7 +20,7 @@ new Vue({
 })
 ```
 
-### 基础用法
+## 基础用法
 
 <p></p>
 <g-input-normal></g-input-normal>
@@ -30,7 +30,7 @@ new Vue({
 <g-input></g-input>
 ```
 
-### 禁用状态
+## 禁用状态
 
 <p></p>
 <g-input-normal disabled placeholder="禁用状态"></g-input-normal>
@@ -40,7 +40,7 @@ new Vue({
 <g-input disabled></g-input>
 ```
 
-### 可读状态
+## 可读状态
 
 <p></p>
 <g-input-readonly readonly></g-input-readonly>
@@ -50,7 +50,7 @@ new Vue({
 <g-input readonly></g-input>
 ```
 
-### 错误状态
+## 错误状态
 
 <p></p>
 <g-input-error readonly></g-input-error>
@@ -60,7 +60,7 @@ new Vue({
 <g-input error="error"></g-input>
 ```
 
-### 事件监听
+## 事件监听
 
 > 可监测 change/input/focus/blur 事件
 
@@ -82,7 +82,7 @@ new Vue({
 </script>
 ```
 
-### v-model 双向绑定
+## v-model 双向绑定
 
 <p></p>
 <g-input-model></g-input-model>
@@ -103,7 +103,7 @@ new Vue({
 </script>
 ```
 
-### Attributes
+## Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

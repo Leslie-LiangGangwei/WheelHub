@@ -5,7 +5,7 @@ title: Grid 栅格
 # Grid 栅格
 > 24 栅格系统
 
-### 设计理念
+## 设计理念
 
 > 布局的栅格化系统，我们是基于行 `row` 和列 `col` 来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：
 
@@ -19,7 +19,7 @@ title: Grid 栅格
 
   * 允许子元素在父节点内的水平对齐方式 - 居左、居中、居右
 
-### 引用
+## 引用
 
 ```
 import Vue from 'vue'
@@ -34,7 +34,7 @@ new Vue({
 })
 ```
 
-### 普通用法
+## 普通用法
 
 <p></p>
 <g-grid-normal></g-grid-normal>
@@ -91,7 +91,7 @@ new Vue({
 </style>
 ```
 
-### 适配 iPhone / iPad / PC
+## 适配 iPhone / iPad / PC
 
 > iPhone 界面下，`g-col` 栅格空间为 4，
 >
@@ -127,8 +127,9 @@ new Vue({
 </style>
 ```
 
-### 设置 gutter
-#### gutter="16"
+## 设置 gutter
+
+### gutter="16"
 
 <p></p>
 <g-grid-gutter></g-grid-gutter>
@@ -185,14 +186,13 @@ new Vue({
 </style>
 ```
 
-#### gutter="{iphone:'0', ipad:'32', pc:'8'}"
+### gutter="{iphone:'0', ipad:'32', pc:'8'}"
 
 > iPhone 界面下，`gutter` 为 0px，
 >
 > iPad 界面下，`gutter` 为 32px，
 >
 > PC 界面下，`gutter` 为 8px。
-
 
 <p></p>
 <g-grid-mediagutter></g-grid-mediagutter>
@@ -221,8 +221,7 @@ new Vue({
 </style>
 ```
 
-### 设置 offset
-
+## 设置 offset
 <p></p>
 <g-grid-offset></g-grid-offset>
 <p></p>
@@ -255,14 +254,17 @@ new Vue({
 </style>
 ```
 
-### Attributes
-#### Row
+## Attributes
+
+### Row
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | gutter | 栅格间隔 | [String, Number, Object] | 8 / {iphone:8, ipad:16, narrowPc:24, pc:32} 建议为 8 的倍数 | 0 | 
 | justify | 水平排列方式     | String | left / right / center | center |
 
-#### Col
+### Col
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
 | span | 栅格占位格数（默认为：iphone 尺寸 `<576px`) | [String, Number] | ---- | ---- |
