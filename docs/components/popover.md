@@ -1,12 +1,30 @@
 ---
-title: Popover
+title: Popover 气泡卡片
 ---
 
 # Popover 气泡卡片
 
 > 点击元素，弹出气泡式的确认框。
 
+### 引用
+
+```
+import Vue from 'vue'
+import {Popopver} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-popover': Popopver,
+    }
+})
+```
+
 ### Click 触发
+
+<p></p>
+<g-popover-click></g-popover-click>
+<p></p>
 
 ```
 <g-popover>
@@ -37,6 +55,10 @@ title: Popover
 
 ### Hover 触发
 
+<p></p>
+<g-popover-hover></g-popover-hover>
+<p></p>
+
 ```
 <g-popover trigger="hover">
   <g-button>Top</g-button>
@@ -64,7 +86,7 @@ title: Popover
 </g-popover>
 ```
 
-## Attributes
+### Attributes
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 

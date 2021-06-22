@@ -1,24 +1,24 @@
 <template>
   <div>
-    <g-popover>
+    <g-popover trigger="hover">
       <g-button>Top</g-button>
       <template slot="content">
         这是 popover 弹出的内容
       </template>
     </g-popover>
-    <g-popover position="bottom">
+    <g-popover trigger="hover" position="bottom">
       <g-button>Bottom</g-button>
       <template slot="content">
         这是 popover 弹出的内容
       </template>
     </g-popover>
-    <g-popover position="left">
+    <g-popover trigger="hover" position="left">
       <g-button>Left</g-button>
       <template slot="content">
         这是 popover 弹出的内容
       </template>
     </g-popover>
-    <g-popover position="right">
+    <g-popover trigger="hover" position="right">
       <g-button>Right</g-button>
       <template slot="content">
         这是 popover 弹出的内容

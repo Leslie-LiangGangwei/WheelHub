@@ -1,13 +1,12 @@
 <template>
   <div ref="popover" class="popover">
-    <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class=`position-${this.position}`>
+    <div ref="contentWrapper" class="content-wrapper" v-if="visible" :class="`position-${this.position}`">
       <slot name="content"></slot>
     </div>
     <div class="trigger" ref="triggerWrapper">
       <slot></slot>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -35,22 +34,28 @@ export default {
     }
   },
   mounted() {
-    if (this.trigger === 'click') {
-      this.$refs.popover.addEventListener('click', this.onClick)
-    } else {
-      this.$refs.popover.addEventListener('mouseenter', this.open)
-      this.$refs.popover.addEventListener('mouseleave', this.close)
-    }
+    this.addPopoverListeners()
   },
-  destroyed() {
-    if (this.trigger === 'click') {
-      this.$refs.popover.removeEventListener('click', this.onClick)
-    } else {
-      this.$refs.popover.removeEventListener('mouseenter', this.open)
-      this.$refs.popover.removeEventListener('mouseleave', this.close)
-    }
+  beforeDestroy() {
+    this.removePopoverListeners()
   },
   methods: {
+    addPopoverListeners() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click', this.onClick)
+      } else {
+        this.$refs.popover.addEventListener('mouseenter', this.open)
+        this.$refs.popover.addEventListener('mouseleave', this.close)
+      }
+    },
+    removePopoverListeners() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.removeEventListener('click', this.onClick)
+      } else {
+        this.$refs.popover.removeEventListener('mouseenter', this.open)
+        this.$refs.popover.removeEventListener('mouseleave', this.close)
+      }
+    },
     onClick(event) {
       if (this.$refs.triggerWrapper.contains(event.target)) {
         if (this.visible === true) {
@@ -66,6 +71,10 @@ export default {
         this.contentPosition()
         this.listenToDocument()
       })
+    },
+    close() {
+      this.visible = false
+      document.removeEventListener('click', this.eventHandler)
     },
     contentPosition() {
       const {contentWrapper, triggerWrapper} = this.$refs
@@ -95,19 +104,12 @@ export default {
     },
     listenToDocument() {
       document.addEventListener('click', this.eventHandler)
-    }
-    ,
+    },
     eventHandler(event) {
       if (this.$refs.popover &&
           (this.$refs.contentWrapper === event.target || this.$refs.popover.contains(event.target))
-      ) {
-      } else {
-        this.close()
-      }
-    },
-    close() {
-      this.visible = false
-      document.removeEventListener('click', this.eventHandler)
+      ) { return }
+      this.close()
     }
   }
 }
@@ -124,6 +126,7 @@ $font-size: 14px;
 
 .content-wrapper {
   position: absolute;
+  z-index: 30;
   border: 1px solid $border-color;
   padding: .5em 1em;
   word-break: break-all;
