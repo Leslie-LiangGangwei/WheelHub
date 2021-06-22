@@ -34,7 +34,6 @@
 import GButton from '../../../src/component/button/button'
 import GPopover from '../../../src/component/popover'
 
-
 export default {
   components: {GButton, GPopover},
 }
