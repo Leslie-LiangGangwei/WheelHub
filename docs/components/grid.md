@@ -256,16 +256,13 @@ new Vue({
 ```
 
 ### Attributes
-
-### Row
-
+#### Row
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | gutter | 栅格间隔 | [String, Number, Object] | 8 / {iphone:8, ipad:16, narrowPc:24, pc:32} 建议为 8 的倍数 | 0 | 
 | justify | 水平排列方式     | String | left / right / center | center |
 
-### Col
-
+#### Col
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
 | span | 栅格占位格数（默认为：iphone 尺寸 `<576px`) | [String, Number] | ---- | ---- |
