@@ -3,9 +3,7 @@ title: Popover 气泡卡片
 ---
 
 # Popover 气泡卡片
-
 > 点击元素，弹出气泡式的确认框。
-
 ## 引用
 
 ```
@@ -21,9 +19,10 @@ new Vue({
 ```
 
 ## Click 触发
-
 <p></p>
-<g-popover-click></g-popover-click>
+<ClientOnly>
+<g-popover></g-popover>
+</ClientOnly>
 <p></p>
 
 ```
@@ -56,7 +55,9 @@ new Vue({
 ## Hover 触发
 
 <p></p>
+<ClientOnly>
 <g-popover-hover></g-popover-hover>
+</ClientOnly>
 <p></p>
 
 ```
@@ -87,7 +88,6 @@ new Vue({
 ```
 
 ## Attributes
-
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | position | Popover 定位 | String | top / bottom / left / right | top | 

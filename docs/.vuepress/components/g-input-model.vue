@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ inputValue }}</p>
     <component
         v-if="dynamicComponent"
         v-model="inputValue"
@@ -9,7 +10,6 @@
         :readonly="$attrs.readonly"
         :disabled="$attrs.disabled"
     ></component>
-    <p>{{ inputValue }}</p>
   </div>
 </template>
 

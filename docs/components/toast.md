@@ -34,8 +34,6 @@ new Vue({
 <g-toast-top></g-toast-top><g-toast-bottom></g-toast-bottom><g-toast-middle></g-toast-middle>
 </div>
 
-## Toast 不同定位
-
 ### 默认定位（Top）
 
 ```
@@ -131,9 +129,7 @@ new Vue({
 ```
 
 ## Toast 是否自动关闭
-
 ### 开启自动关闭
-
 > 5 秒后关闭 Toast
 
 <p></p>
@@ -180,7 +176,7 @@ new Vue({
 })
 ```
 
-## Toast 可设置 toastButton 执行回调函数
+## 可配置回调函数 & 设置 toastButton
 
 <p></p>
 <g-toast-toastButton></g-toast-toastButton>

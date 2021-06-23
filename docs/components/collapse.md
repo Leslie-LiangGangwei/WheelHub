@@ -39,7 +39,7 @@ new Vue({
 ```
 
 ## 开启 single 模式
-> 同一组件仅可展示一个 CollapseItem
+> 同一 Collapse 组件仅可展开一个 CollapseItem
 
 <p></p>
 <g-collapse-single></g-collapse-single>
@@ -59,8 +59,8 @@ new Vue({
 </g-collapse>
 ```
 
-## 设置 collapse 默认展开项
-> 默认展示"第一项"和"第二项" CollapseItem
+## 设置默认展开项
+> 默认展开"第一项"和"第二项" CollapseItem
 
 <p></p>
 <g-collapse-selected></g-collapse-selected>
@@ -80,7 +80,8 @@ new Vue({
 </g-collapse>
 ```
 
-## 通过 selected.sync 实现数据双向绑定
+## selected.sync
+> 通过 selected.sync 实现数据双向绑定
 
 <p></p>
 <g-collapse-selected-sync></g-collapse-selected-sync>

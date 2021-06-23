@@ -3,29 +3,23 @@ title: icon 图标
 ---
 
 # icon 图标
-
 > icon 作为 WheelHub 最简单的组件，推荐使用 iconfont SVG 利于维护，提高性能。
 
 ## 引用
-
 ### iconfont.js 引用
-
 > 在 [iconfont 官网](https://www.iconfont.cn/) 下载（你的项目文件）`iconfont.js` 后
 
-1. 需要在 `main.js`（或是其他入口 js 文件）引用
-
+#### 1. 需要在 `main.js`（或是其他入口 js 文件）引用
 ```
 import "../iconfont.js";
 ```
 
-2. 或者在 `index.html`
-
+#### 2. 或者在 `index.html`
 ```
 <script src="./src/icon/iconfont.js"></script>
 ```
 
-#### 组件引用
-
+### 组件引用
 ```
 import Vue from 'vue'
 import {Icon} from 'wheelhub'
@@ -38,7 +32,7 @@ new Vue({
 })
 ```
 
-## icon 展示
+## 展示
 <p></p>
 <g-icon name='setting'></g-icon>
 <p></p>

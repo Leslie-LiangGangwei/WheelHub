@@ -37,7 +37,7 @@ new Vue({
 <p></p>
 
 ```
-<g-input disabled></g-input>
+<g-input value="禁用状态" disabled></g-input>
 ```
 
 ## 可读状态
@@ -47,7 +47,7 @@ new Vue({
 <p></p>
 
 ```
-<g-input readonly></g-input>
+<g-input value="可读状态" readonly></g-input>
 ```
 
 ## 错误状态
@@ -57,12 +57,12 @@ new Vue({
 <p></p>
 
 ```
-<g-input error="error"></g-input>
+<g-input value="error" error="value is error"></g-input>
 ```
 
 ## 事件监听
 
-> 可监测 change/input/focus/blur 事件
+> 可监测 change / input / focus / blur 事件
 
 <p></p>
 <g-input-event></g-input-event>
@@ -89,14 +89,14 @@ new Vue({
 <p></p>
 
 ```
-<g-input v-model="inputValue"></g-input>
 <p>{{inputValue}}</p>
+<g-input v-model="inputValue"></g-input>
 
 <script>
     export default {
       data() {
         return {
-          inputValue: ''
+          inputValue: '实现 v-model 双向绑定'
         }
       }
     }

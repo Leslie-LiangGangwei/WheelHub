@@ -13,8 +13,7 @@ module.exports = {
             {
                 title: '入门指南',
                 children: [
-                    '/start/install.md',
-                    '/start/easy-get.md'
+                    '/start/install.md'
                 ]
             },
             {
