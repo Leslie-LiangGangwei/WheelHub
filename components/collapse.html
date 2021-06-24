@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Collapse 折叠面板 | WheelHub</title>
+    <meta name="description" content="基于 VUE2 搭建的 UI 框架">
+    
+    
+    <link rel="preload" href="/WheelHub/assets/css/styles.0d97a08f.css" as="style"><link rel="preload" href="/WheelHub/assets/js/app.0d97a08f.js" as="script"><link rel="preload" href="/WheelHub/assets/js/48.37020c99.js" as="script"><link rel="preload" href="/WheelHub/assets/css/23.styles.2660e92e.css" as="style"><link rel="preload" href="/WheelHub/assets/js/23.2660e92e.js" as="script"><link rel="preload" href="/WheelHub/assets/css/22.styles.bd3a2a1b.css" as="style"><link rel="preload" href="/WheelHub/assets/js/22.bd3a2a1b.js" as="script"><link rel="preload" href="/WheelHub/assets/css/21.styles.8edfd7e3.css" as="style"><link rel="preload" href="/WheelHub/assets/js/21.8edfd7e3.js" as="script"><link rel="preload" href="/WheelHub/assets/css/20.styles.6ebc7dad.css" as="style"><link rel="preload" href="/WheelHub/assets/js/20.6ebc7dad.js" as="script"><link rel="prefetch" href="/WheelHub/assets/css/0.styles.780cfe9b.css"><link rel="prefetch" href="/WheelHub/assets/css/1.styles.395b269d.css"><link rel="prefetch" href="/WheelHub/assets/css/10.styles.0d7437ac.css"><link rel="prefetch" href="/WheelHub/assets/css/11.styles.1da24efc.css"><link rel="prefetch" href="/WheelHub/assets/css/12.styles.7fdc0e9f.css"><link rel="prefetch" href="/WheelHub/assets/css/13.styles.a87ef03d.css"><link rel="prefetch" href="/WheelHub/assets/css/14.styles.14a4e558.css"><link rel="prefetch" href="/WheelHub/assets/css/15.styles.e7a173f9.css"><link rel="prefetch" href="/WheelHub/assets/css/16.styles.28001d31.css"><link rel="prefetch" href="/WheelHub/assets/css/17.styles.dd5d25d6.css"><link rel="prefetch" href="/WheelHub/assets/css/18.styles.8a95d1e7.css"><link rel="prefetch" href="/WheelHub/assets/css/19.styles.215e1000.css"><link rel="prefetch" href="/WheelHub/assets/css/2.styles.052a98e4.css"><link rel="prefetch" href="/WheelHub/assets/css/24.styles.357b3f3d.css"><link rel="prefetch" href="/WheelHub/assets/css/25.styles.d72e74ec.css"><link rel="prefetch" href="/WheelHub/assets/css/26.styles.b9c852ff.css"><link rel="prefetch" href="/WheelHub/assets/css/27.styles.a830a20f.css"><link rel="prefetch" href="/WheelHub/assets/css/28.styles.931d63e6.css"><link rel="prefetch" href="/WheelHub/assets/css/29.styles.2c9de4e8.css"><link rel="prefetch" href="/WheelHub/assets/css/30.styles.9234e93e.css"><link rel="prefetch" href="/WheelHub/assets/css/31.styles.2d1c080c.css"><link rel="prefetch" href="/WheelHub/assets/css/32.styles.bba5a79e.css"><link rel="prefetch" href="/WheelHub/assets/css/4.styles.4a8ab480.css"><link rel="prefetch" href="/WheelHub/assets/css/5.styles.bdc8dce9.css"><link rel="prefetch" href="/WheelHub/assets/css/6.styles.5d76f74a.css"><link rel="prefetch" href="/WheelHub/assets/css/7.styles.ed112fde.css"><link rel="prefetch" href="/WheelHub/assets/css/8.styles.da7ae729.css"><link rel="prefetch" href="/WheelHub/assets/css/9.styles.b51c9546.css"><link rel="prefetch" href="/WheelHub/assets/js/0.780cfe9b.js"><link rel="prefetch" href="/WheelHub/assets/js/1.395b269d.js"><link rel="prefetch" href="/WheelHub/assets/js/10.0d7437ac.js"><link rel="prefetch" href="/WheelHub/assets/js/11.1da24efc.js"><link rel="prefetch" href="/WheelHub/assets/js/12.7fdc0e9f.js"><link rel="prefetch" href="/WheelHub/assets/js/13.a87ef03d.js"><link rel="prefetch" href="/WheelHub/assets/js/14.14a4e558.js"><link rel="prefetch" href="/WheelHub/assets/js/15.e7a173f9.js"><link rel="prefetch" href="/WheelHub/assets/js/16.28001d31.js"><link rel="prefetch" href="/WheelHub/assets/js/17.dd5d25d6.js"><link rel="prefetch" href="/WheelHub/assets/js/18.8a95d1e7.js"><link rel="prefetch" href="/WheelHub/assets/js/19.215e1000.js"><link rel="prefetch" href="/WheelHub/assets/js/2.052a98e4.js"><link rel="prefetch" href="/WheelHub/assets/js/24.357b3f3d.js"><link rel="prefetch" href="/WheelHub/assets/js/25.d72e74ec.js"><link rel="prefetch" href="/WheelHub/assets/js/26.b9c852ff.js"><link rel="prefetch" href="/WheelHub/assets/js/27.a830a20f.js"><link rel="prefetch" href="/WheelHub/assets/js/28.931d63e6.js"><link rel="prefetch" href="/WheelHub/assets/js/29.2c9de4e8.js"><link rel="prefetch" href="/WheelHub/assets/js/30.9234e93e.js"><link rel="prefetch" href="/WheelHub/assets/js/31.2d1c080c.js"><link rel="prefetch" href="/WheelHub/assets/js/32.bba5a79e.js"><link rel="prefetch" href="/WheelHub/assets/js/33.610e7f17.js"><link rel="prefetch" href="/WheelHub/assets/js/34.8263920e.js"><link rel="prefetch" href="/WheelHub/assets/js/35.6cdc437d.js"><link rel="prefetch" href="/WheelHub/assets/js/36.ed03c20a.js"><link rel="prefetch" href="/WheelHub/assets/js/37.b09dd8d3.js"><link rel="prefetch" href="/WheelHub/assets/js/38.992186d9.js"><link rel="prefetch" href="/WheelHub/assets/js/39.5bfb1039.js"><link rel="prefetch" href="/WheelHub/assets/js/4.4a8ab480.js"><link rel="prefetch" href="/WheelHub/assets/js/40.7a517126.js"><link rel="prefetch" href="/WheelHub/assets/js/41.686c9b3b.js"><link rel="prefetch" href="/WheelHub/assets/js/42.c6650cb3.js"><link rel="prefetch" href="/WheelHub/assets/js/43.0518074d.js"><link rel="prefetch" href="/WheelHub/assets/js/44.fb1fa777.js"><link rel="prefetch" href="/WheelHub/assets/js/45.0047790c.js"><link rel="prefetch" href="/WheelHub/assets/js/46.3d9bc0f1.js"><link rel="prefetch" href="/WheelHub/assets/js/47.4c39bd76.js"><link rel="prefetch" href="/WheelHub/assets/js/49.ebd9310b.js"><link rel="prefetch" href="/WheelHub/assets/js/5.bdc8dce9.js"><link rel="prefetch" href="/WheelHub/assets/js/50.8ca5285a.js"><link rel="prefetch" href="/WheelHub/assets/js/51.bd3eda1a.js"><link rel="prefetch" href="/WheelHub/assets/js/52.3369a3ea.js"><link rel="prefetch" href="/WheelHub/assets/js/53.23b6bad3.js"><link rel="prefetch" href="/WheelHub/assets/js/54.ba73396e.js"><link rel="prefetch" href="/WheelHub/assets/js/55.109aca3f.js"><link rel="prefetch" href="/WheelHub/assets/js/56.f72a3d26.js"><link rel="prefetch" href="/WheelHub/assets/js/57.acb13755.js"><link rel="prefetch" href="/WheelHub/assets/js/58.7451be88.js"><link rel="prefetch" href="/WheelHub/assets/js/59.41309044.js"><link rel="prefetch" href="/WheelHub/assets/js/6.5d76f74a.js"><link rel="prefetch" href="/WheelHub/assets/js/7.ed112fde.js"><link rel="prefetch" href="/WheelHub/assets/js/8.da7ae729.js"><link rel="prefetch" href="/WheelHub/assets/js/9.b51c9546.js">
+    <link rel="stylesheet" href="/WheelHub/assets/css/styles.0d97a08f.css"><link rel="stylesheet" href="/WheelHub/assets/css/23.styles.2660e92e.css"><link rel="stylesheet" href="/WheelHub/assets/css/22.styles.bd3a2a1b.css"><link rel="stylesheet" href="/WheelHub/assets/css/21.styles.8edfd7e3.css"><link rel="stylesheet" href="/WheelHub/assets/css/20.styles.6ebc7dad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/WheelHub/" class="home-link router-link-active"><!----> <span class="site-name">WheelHub</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>入门指南</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>组件展示</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/WheelHub/components/icon.html" class="sidebar-link">icon 图标</a></li><li><a href="/WheelHub/components/button.html" class="sidebar-link">Button 按钮</a></li><li><a href="/WheelHub/components/input.html" class="sidebar-link">Input 输入框</a></li><li><a href="/WheelHub/components/grid.html" class="sidebar-link">Grid 栅格</a></li><li><a href="/WheelHub/components/layout.html" class="sidebar-link">Layout 布局</a></li><li><a href="/WheelHub/components/toast.html" class="sidebar-link">Toast 全局提示</a></li><li><a href="/WheelHub/components/tabs.html" class="sidebar-link">Tabs 标签页</a></li><li><a href="/WheelHub/components/popover.html" class="sidebar-link">Popover 气泡卡片</a></li><li><a href="/WheelHub/components/collapse.html" aria-current="page" class="active sidebar-link">Collapse 折叠面板</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#引用" class="sidebar-link">引用</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#正常用法" class="sidebar-link">正常用法</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#开启-single-模式" class="sidebar-link">开启 single 模式</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#设置默认展开项" class="sidebar-link">设置默认展开项</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#selected-sync" class="sidebar-link">selected.sync</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/collapse.html#attributes" class="sidebar-link">Attributes</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="collapse-折叠面板"><a href="#collapse-折叠面板" class="header-anchor">#</a> Collapse 折叠面板</h1> <blockquote><p>可以折叠/展开的内容区域。</p></blockquote> <h2 id="引用"><a href="#引用" class="header-anchor">#</a> 引用</h2> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import {Collapse, CollapseItem} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-collapse': Collapse
+        'g-collapse-item': CollapseItem
+    }
+})
+</code></pre></div><h2 id="正常用法"><a href="#正常用法" class="header-anchor">#</a> 正常用法</h2> <p></p> <div class="collapse" data-v-e3acc58a><div class="collapse-item" data-v-a544914a><div title-name="title 1" class="title" data-v-a544914a>
+    title 1
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 2" class="title" data-v-a544914a>
+    title 2
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 3" class="title" data-v-a544914a>
+    title 3
+  </div> <!----></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-collapse&gt;
+    &lt;g-collapse-item title=&quot;title 1&quot; name=&quot;1&quot;&gt;
+        panel 1
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 2&quot; name=&quot;2&quot;&gt;
+        panel 2
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 3&quot; name=&quot;3&quot;&gt;
+        panel 3
+    &lt;/g-collapse-item&gt;
+&lt;/g-collapse&gt;
+</code></pre></div><h2 id="开启-single-模式"><a href="#开启-single-模式" class="header-anchor">#</a> 开启 single 模式</h2> <blockquote><p>同一 Collapse 组件仅可展开一个 CollapseItem</p></blockquote> <p></p> <div class="collapse" data-v-e3acc58a><div class="collapse-item" data-v-a544914a><div title-name="title 1" class="title" data-v-a544914a>
+    title 1
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 2" class="title" data-v-a544914a>
+    title 2
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 3" class="title" data-v-a544914a>
+    title 3
+  </div> <!----></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-collapse single&gt;
+    &lt;g-collapse-item title=&quot;title 1&quot; name=&quot;1&quot;&gt;
+        panel 1
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 2&quot; name=&quot;2&quot;&gt;
+        panel 2
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 3&quot; name=&quot;3&quot;&gt;
+        panel 3
+    &lt;/g-collapse-item&gt;
+&lt;/g-collapse&gt;
+</code></pre></div><h2 id="设置默认展开项"><a href="#设置默认展开项" class="header-anchor">#</a> 设置默认展开项</h2> <blockquote><p>默认展开&quot;第一项&quot;和&quot;第二项&quot; CollapseItem</p></blockquote> <p></p> <div class="collapse" data-v-e3acc58a><div class="collapse-item" data-v-a544914a><div title-name="title 1" class="title" data-v-a544914a>
+    title 1
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 2" class="title" data-v-a544914a>
+    title 2
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 3" class="title" data-v-a544914a>
+    title 3
+  </div> <!----></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-collapse :selected=[&quot;1&quot;, &quot;2&quot;]&gt;
+    &lt;g-collapse-item title=&quot;title 1&quot; name=&quot;1&quot;&gt;
+        panel 1
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 2&quot; name=&quot;2&quot;&gt;
+        panel 2
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 3&quot; name=&quot;3&quot;&gt;
+        panel 3
+    &lt;/g-collapse-item&gt;
+&lt;/g-collapse&gt;
+</code></pre></div><h2 id="selected-sync"><a href="#selected-sync" class="header-anchor">#</a> selected.sync</h2> <blockquote><p>通过 selected.sync 实现数据双向绑定</p></blockquote> <p></p> <div><p>[
+  &quot;1&quot;,
+  &quot;2&quot;
+]</p> <div class="collapse" data-v-e3acc58a><div class="collapse-item" data-v-a544914a><div title-name="title 1" class="title" data-v-a544914a>
+    title 1
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 2" class="title" data-v-a544914a>
+    title 2
+  </div> <!----></div> <div class="collapse-item" data-v-a544914a><div title-name="title 3" class="title" data-v-a544914a>
+    title 3
+  </div> <!----></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-collapse :selected.sync=collapseSelected&gt;
+    &lt;p&gt;{{collapseSelected}}&lt;/p&gt;
+
+    &lt;g-collapse-item title=&quot;title 1&quot; name=&quot;1&quot;&gt;
+        panel 1
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 2&quot; name=&quot;2&quot;&gt;
+        panel 2
+    &lt;/g-collapse-item&gt;
+    &lt;g-collapse-item title=&quot;title 3&quot; name=&quot;3&quot;&gt;
+        panel 3
+    &lt;/g-collapse-item&gt;
+&lt;/g-collapse&gt;
+
+new Vue({
+    el: '#app',
+    data: {
+        collapseSelected: ['1', '2']
+    },
+})
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <h3 id="collapse"><a href="#collapse" class="header-anchor">#</a> Collapse</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>single</td> <td>判断 Collapse-item 是否只展开&quot;单个&quot;</td> <td>Boolean</td> <td>true / false</td> <td>false</td></tr> <tr><td>selected</td> <td>设置 Collapse 默认展开项</td> <td>Array</td> <td>----</td> <td>[]</td></tr></tbody></table> <h3 id="collapse-item"><a href="#collapse-item" class="header-anchor">#</a> Collapse-item</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>title</td> <td>Collapse-item 标题（必填项）</td> <td>String</td> <td>----</td> <td>----</td></tr> <tr><td>name</td> <td>对应 selected（必填项）</td> <td>String</td> <td>----</td> <td>----</td></tr></tbody></table></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/WheelHub/components/popover.html" class="prev">
+          Popover 气泡卡片
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/WheelHub/assets/js/app.0d97a08f.js" defer></script><script src="/WheelHub/assets/js/48.37020c99.js" defer></script><script src="/WheelHub/assets/js/23.2660e92e.js" defer></script><script src="/WheelHub/assets/js/22.bd3a2a1b.js" defer></script><script src="/WheelHub/assets/js/21.8edfd7e3.js" defer></script><script src="/WheelHub/assets/js/20.6ebc7dad.js" defer></script>
+  </body>
+</html>

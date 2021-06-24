@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Toast 全局提示 | WheelHub</title>
+    <meta name="description" content="基于 VUE2 搭建的 UI 框架">
+    
+    
+    <link rel="preload" href="/WheelHub/assets/css/styles.0d97a08f.css" as="style"><link rel="preload" href="/WheelHub/assets/js/app.0d97a08f.js" as="script"><link rel="preload" href="/WheelHub/assets/js/55.109aca3f.js" as="script"><link rel="preload" href="/WheelHub/assets/css/16.styles.28001d31.css" as="style"><link rel="preload" href="/WheelHub/assets/js/16.28001d31.js" as="script"><link rel="preload" href="/WheelHub/assets/css/12.styles.7fdc0e9f.css" as="style"><link rel="preload" href="/WheelHub/assets/js/12.7fdc0e9f.js" as="script"><link rel="preload" href="/WheelHub/assets/css/14.styles.14a4e558.css" as="style"><link rel="preload" href="/WheelHub/assets/js/14.14a4e558.js" as="script"><link rel="preload" href="/WheelHub/assets/css/13.styles.a87ef03d.css" as="style"><link rel="preload" href="/WheelHub/assets/js/13.a87ef03d.js" as="script"><link rel="preload" href="/WheelHub/assets/css/11.styles.1da24efc.css" as="style"><link rel="preload" href="/WheelHub/assets/js/11.1da24efc.js" as="script"><link rel="preload" href="/WheelHub/assets/css/10.styles.0d7437ac.css" as="style"><link rel="preload" href="/WheelHub/assets/js/10.0d7437ac.js" as="script"><link rel="preload" href="/WheelHub/assets/css/15.styles.e7a173f9.css" as="style"><link rel="preload" href="/WheelHub/assets/js/15.e7a173f9.js" as="script"><link rel="prefetch" href="/WheelHub/assets/css/0.styles.780cfe9b.css"><link rel="prefetch" href="/WheelHub/assets/css/1.styles.395b269d.css"><link rel="prefetch" href="/WheelHub/assets/css/17.styles.dd5d25d6.css"><link rel="prefetch" href="/WheelHub/assets/css/18.styles.8a95d1e7.css"><link rel="prefetch" href="/WheelHub/assets/css/19.styles.215e1000.css"><link rel="prefetch" href="/WheelHub/assets/css/2.styles.052a98e4.css"><link rel="prefetch" href="/WheelHub/assets/css/20.styles.6ebc7dad.css"><link rel="prefetch" href="/WheelHub/assets/css/21.styles.8edfd7e3.css"><link rel="prefetch" href="/WheelHub/assets/css/22.styles.bd3a2a1b.css"><link rel="prefetch" href="/WheelHub/assets/css/23.styles.2660e92e.css"><link rel="prefetch" href="/WheelHub/assets/css/24.styles.357b3f3d.css"><link rel="prefetch" href="/WheelHub/assets/css/25.styles.d72e74ec.css"><link rel="prefetch" href="/WheelHub/assets/css/26.styles.b9c852ff.css"><link rel="prefetch" href="/WheelHub/assets/css/27.styles.a830a20f.css"><link rel="prefetch" href="/WheelHub/assets/css/28.styles.931d63e6.css"><link rel="prefetch" href="/WheelHub/assets/css/29.styles.2c9de4e8.css"><link rel="prefetch" href="/WheelHub/assets/css/30.styles.9234e93e.css"><link rel="prefetch" href="/WheelHub/assets/css/31.styles.2d1c080c.css"><link rel="prefetch" href="/WheelHub/assets/css/32.styles.bba5a79e.css"><link rel="prefetch" href="/WheelHub/assets/css/4.styles.4a8ab480.css"><link rel="prefetch" href="/WheelHub/assets/css/5.styles.bdc8dce9.css"><link rel="prefetch" href="/WheelHub/assets/css/6.styles.5d76f74a.css"><link rel="prefetch" href="/WheelHub/assets/css/7.styles.ed112fde.css"><link rel="prefetch" href="/WheelHub/assets/css/8.styles.da7ae729.css"><link rel="prefetch" href="/WheelHub/assets/css/9.styles.b51c9546.css"><link rel="prefetch" href="/WheelHub/assets/js/0.780cfe9b.js"><link rel="prefetch" href="/WheelHub/assets/js/1.395b269d.js"><link rel="prefetch" href="/WheelHub/assets/js/17.dd5d25d6.js"><link rel="prefetch" href="/WheelHub/assets/js/18.8a95d1e7.js"><link rel="prefetch" href="/WheelHub/assets/js/19.215e1000.js"><link rel="prefetch" href="/WheelHub/assets/js/2.052a98e4.js"><link rel="prefetch" href="/WheelHub/assets/js/20.6ebc7dad.js"><link rel="prefetch" href="/WheelHub/assets/js/21.8edfd7e3.js"><link rel="prefetch" href="/WheelHub/assets/js/22.bd3a2a1b.js"><link rel="prefetch" href="/WheelHub/assets/js/23.2660e92e.js"><link rel="prefetch" href="/WheelHub/assets/js/24.357b3f3d.js"><link rel="prefetch" href="/WheelHub/assets/js/25.d72e74ec.js"><link rel="prefetch" href="/WheelHub/assets/js/26.b9c852ff.js"><link rel="prefetch" href="/WheelHub/assets/js/27.a830a20f.js"><link rel="prefetch" href="/WheelHub/assets/js/28.931d63e6.js"><link rel="prefetch" href="/WheelHub/assets/js/29.2c9de4e8.js"><link rel="prefetch" href="/WheelHub/assets/js/30.9234e93e.js"><link rel="prefetch" href="/WheelHub/assets/js/31.2d1c080c.js"><link rel="prefetch" href="/WheelHub/assets/js/32.bba5a79e.js"><link rel="prefetch" href="/WheelHub/assets/js/33.610e7f17.js"><link rel="prefetch" href="/WheelHub/assets/js/34.8263920e.js"><link rel="prefetch" href="/WheelHub/assets/js/35.6cdc437d.js"><link rel="prefetch" href="/WheelHub/assets/js/36.ed03c20a.js"><link rel="prefetch" href="/WheelHub/assets/js/37.b09dd8d3.js"><link rel="prefetch" href="/WheelHub/assets/js/38.992186d9.js"><link rel="prefetch" href="/WheelHub/assets/js/39.5bfb1039.js"><link rel="prefetch" href="/WheelHub/assets/js/4.4a8ab480.js"><link rel="prefetch" href="/WheelHub/assets/js/40.7a517126.js"><link rel="prefetch" href="/WheelHub/assets/js/41.686c9b3b.js"><link rel="prefetch" href="/WheelHub/assets/js/42.c6650cb3.js"><link rel="prefetch" href="/WheelHub/assets/js/43.0518074d.js"><link rel="prefetch" href="/WheelHub/assets/js/44.fb1fa777.js"><link rel="prefetch" href="/WheelHub/assets/js/45.0047790c.js"><link rel="prefetch" href="/WheelHub/assets/js/46.3d9bc0f1.js"><link rel="prefetch" href="/WheelHub/assets/js/47.4c39bd76.js"><link rel="prefetch" href="/WheelHub/assets/js/48.37020c99.js"><link rel="prefetch" href="/WheelHub/assets/js/49.ebd9310b.js"><link rel="prefetch" href="/WheelHub/assets/js/5.bdc8dce9.js"><link rel="prefetch" href="/WheelHub/assets/js/50.8ca5285a.js"><link rel="prefetch" href="/WheelHub/assets/js/51.bd3eda1a.js"><link rel="prefetch" href="/WheelHub/assets/js/52.3369a3ea.js"><link rel="prefetch" href="/WheelHub/assets/js/53.23b6bad3.js"><link rel="prefetch" href="/WheelHub/assets/js/54.ba73396e.js"><link rel="prefetch" href="/WheelHub/assets/js/56.f72a3d26.js"><link rel="prefetch" href="/WheelHub/assets/js/57.acb13755.js"><link rel="prefetch" href="/WheelHub/assets/js/58.7451be88.js"><link rel="prefetch" href="/WheelHub/assets/js/59.41309044.js"><link rel="prefetch" href="/WheelHub/assets/js/6.5d76f74a.js"><link rel="prefetch" href="/WheelHub/assets/js/7.ed112fde.js"><link rel="prefetch" href="/WheelHub/assets/js/8.da7ae729.js"><link rel="prefetch" href="/WheelHub/assets/js/9.b51c9546.js">
+    <link rel="stylesheet" href="/WheelHub/assets/css/styles.0d97a08f.css"><link rel="stylesheet" href="/WheelHub/assets/css/16.styles.28001d31.css"><link rel="stylesheet" href="/WheelHub/assets/css/12.styles.7fdc0e9f.css"><link rel="stylesheet" href="/WheelHub/assets/css/14.styles.14a4e558.css"><link rel="stylesheet" href="/WheelHub/assets/css/13.styles.a87ef03d.css"><link rel="stylesheet" href="/WheelHub/assets/css/11.styles.1da24efc.css"><link rel="stylesheet" href="/WheelHub/assets/css/10.styles.0d7437ac.css"><link rel="stylesheet" href="/WheelHub/assets/css/15.styles.e7a173f9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/WheelHub/" class="home-link router-link-active"><!----> <span class="site-name">WheelHub</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>入门指南</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>组件展示</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/WheelHub/components/icon.html" class="sidebar-link">icon 图标</a></li><li><a href="/WheelHub/components/button.html" class="sidebar-link">Button 按钮</a></li><li><a href="/WheelHub/components/input.html" class="sidebar-link">Input 输入框</a></li><li><a href="/WheelHub/components/grid.html" class="sidebar-link">Grid 栅格</a></li><li><a href="/WheelHub/components/layout.html" class="sidebar-link">Layout 布局</a></li><li><a href="/WheelHub/components/toast.html" aria-current="page" class="active sidebar-link">Toast 全局提示</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#引入" class="sidebar-link">引入</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#toast-启用-html" class="sidebar-link">Toast 启用 HTML</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#toast-是否自动关闭" class="sidebar-link">Toast 是否自动关闭</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#可配置回调函数-设置-toastbutton-文案" class="sidebar-link">可配置回调函数 &amp; 设置 toastButton 文案</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/toast.html#attributes" class="sidebar-link">Attributes</a></li></ul></li><li><a href="/WheelHub/components/tabs.html" class="sidebar-link">Tabs 标签页</a></li><li><a href="/WheelHub/components/popover.html" class="sidebar-link">Popover 气泡卡片</a></li><li><a href="/WheelHub/components/collapse.html" class="sidebar-link">Collapse 折叠面板</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="toast-全局提示"><a href="#toast-全局提示" class="header-anchor">#</a> Toast 全局提示</h1> <blockquote><p>Toast 为全局展示操作反馈信息的组件。</p></blockquote> <h2 id="引入"><a href="#引入" class="header-anchor">#</a> 引入</h2> <blockquote><p>贯彻工程化思路，用户需要自动 <code>vue.ues(...)</code>调用插件后，才可使用。</p></blockquote> <h3 id="需要在-app-js-调用"><a href="#需要在-app-js-调用" class="header-anchor">#</a> 需要在 app.js 调用</h3> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Toast from './component/toast'
+import toastPlugin from 'toastPlugin'
+
+Vue.use(toastPlugin)
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() {
+            this.$toast('我是 Toast')
+        }
+    }
+})
+</code></pre></div><h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <blockquote><p>Toast 默认三秒后自动关闭</p></blockquote> <div style="display: flex;"><div data-v-28bf425a><g-button data-v-28bf425a>Top</g-button></div><div style="margin-left:16px;" data-v-30d48d1a><g-button data-v-30d48d1a>Bottom</g-button></div><div style="margin-left:16px;" data-v-5ac18a73><g-button data-v-5ac18a73>Middle</g-button></div></div> <h3 id="top-定位（默认）"><a href="#top-定位（默认）" class="header-anchor">#</a> Top 定位（默认）</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;style&gt;
+    .toast {
+      z-index: 30;
+    }
+&lt;/style&gt;
+
+&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { this.$toast('Top 弹出 Toast') }
+    }
+})
+</code></pre></div><h3 id="bottom-定位"><a href="#bottom-定位" class="header-anchor">#</a> Bottom 定位</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;style&gt;
+    .toast {
+      z-index: 30;
+    }
+&lt;/style&gt;
+
+&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { 
+            this.$toast('Bottom 弹出 Toast' ,{
+                toastPosition: 'bottom'
+            })
+        }
+    }
+})
+</code></pre></div><h3 id="middle-定位"><a href="#middle-定位" class="header-anchor">#</a> middle 定位</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;style&gt;
+    .toast {
+      z-index: 30;
+    }
+&lt;/style&gt;
+
+&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() {
+            this.$toast('Middle 弹出 Toast' ,{
+                toastPosition: 'middle'
+            })
+        }
+    }
+})
+</code></pre></div><h2 id="toast-启用-html"><a href="#toast-启用-html" class="header-anchor">#</a> Toast 启用 HTML</h2> <p></p> <div data-v-61e6bc75><g-button data-v-61e6bc75>enableHtml</g-button></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { 
+            this.$toast('&lt;strong&gt;我是 Toast&lt;/strong&gt;', {
+                enableHtml: true
+            }) 
+        }
+    }
+})
+</code></pre></div><h2 id="toast-是否自动关闭"><a href="#toast-是否自动关闭" class="header-anchor">#</a> Toast 是否自动关闭</h2> <h3 id="开启自动关闭"><a href="#开启自动关闭" class="header-anchor">#</a> 开启自动关闭</h3> <blockquote><p>5 秒后关闭 Toast</p></blockquote> <p></p> <div data-v-4caff37c><g-button data-v-4caff37c>Toast 5秒后关闭</g-button></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { 
+            this.$toast('Toast 5秒后关闭', {
+                autoClose: 5
+            }) 
+        }
+    }
+})
+</code></pre></div><h3 id="不开启自动关闭"><a href="#不开启自动关闭" class="header-anchor">#</a> 不开启自动关闭</h3> <p></p> <div data-v-55c35b88><g-button data-v-55c35b88>Toast 不开启自动关闭</g-button></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { 
+            this.$toast('Toast 不开启自动关闭', {
+                autoClose: false
+            }) 
+        }
+    }
+})
+</code></pre></div><h2 id="可配置回调函数-设置-toastbutton-文案"><a href="#可配置回调函数-设置-toastbutton-文案" class="header-anchor">#</a> 可配置回调函数 &amp; 设置 toastButton 文案</h2> <p></p> <div data-v-28554079><g-button data-v-28554079>Toast 执行回调函数</g-button></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;g-button @click=&quot;showToast&quot;&gt;触发 Toast&lt;/g-button&gt;
+&lt;/div&gt;
+
+new Vue({
+    el: '#app',
+    methods: {
+        showToast() { 
+            this.$toast('我是 Toast', {
+                autoClose: false,
+                toastButton: {
+                    text: &quot;close&quot;, 
+                    callback: alert('可执行回调函数')   
+                }
+            }) 
+        }
+    }
+})
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>message</td> <td>toast 文案</td> <td>String</td> <td>----</td> <td>----</td></tr> <tr><td>toastPosition</td> <td>toast 定位</td> <td>String</td> <td>top/bottom/middle</td> <td>top</td></tr> <tr><td>enableHtml</td> <td>toast 文案是否启用 HTML，例如<code>&lt;strong&gt;&lt;/strong&gt;</code></td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr> <tr><td>autoClose</td> <td>toast 是否自动关闭</td> <td>[Boolean, Number]</td> <td>----</td> <td>3</td></tr> <tr><td>toastButton</td> <td>toast 关闭按钮</td> <td>Object</td> <td>----</td> <td>{text: &quot;关闭&quot;, callback: undefined}</td></tr></tbody></table></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/WheelHub/components/layout.html" class="prev">
+          Layout 布局
+        </a></span> <span class="next"><a href="/WheelHub/components/tabs.html">
+          Tabs 标签页
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/WheelHub/assets/js/app.0d97a08f.js" defer></script><script src="/WheelHub/assets/js/55.109aca3f.js" defer></script><script src="/WheelHub/assets/js/16.28001d31.js" defer></script><script src="/WheelHub/assets/js/12.7fdc0e9f.js" defer></script><script src="/WheelHub/assets/js/14.14a4e558.js" defer></script><script src="/WheelHub/assets/js/13.a87ef03d.js" defer></script><script src="/WheelHub/assets/js/11.1da24efc.js" defer></script><script src="/WheelHub/assets/js/10.0d7437ac.js" defer></script><script src="/WheelHub/assets/js/15.e7a173f9.js" defer></script>
+  </body>
+</html>

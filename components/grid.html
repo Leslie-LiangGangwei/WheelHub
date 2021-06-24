@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grid 栅格 | WheelHub</title>
+    <meta name="description" content="基于 VUE2 搭建的 UI 框架">
+    
+    
+    <link rel="preload" href="/WheelHub/assets/css/styles.0d97a08f.css" as="style"><link rel="preload" href="/WheelHub/assets/js/app.0d97a08f.js" as="script"><link rel="preload" href="/WheelHub/assets/js/49.ebd9310b.js" as="script"><link rel="preload" href="/WheelHub/assets/css/28.styles.931d63e6.css" as="style"><link rel="preload" href="/WheelHub/assets/js/28.931d63e6.js" as="script"><link rel="preload" href="/WheelHub/assets/css/1.styles.395b269d.css" as="style"><link rel="preload" href="/WheelHub/assets/js/1.395b269d.js" as="script"><link rel="preload" href="/WheelHub/assets/css/26.styles.b9c852ff.css" as="style"><link rel="preload" href="/WheelHub/assets/js/26.b9c852ff.js" as="script"><link rel="preload" href="/WheelHub/assets/css/25.styles.d72e74ec.css" as="style"><link rel="preload" href="/WheelHub/assets/js/25.d72e74ec.js" as="script"><link rel="preload" href="/WheelHub/assets/css/27.styles.a830a20f.css" as="style"><link rel="preload" href="/WheelHub/assets/js/27.a830a20f.js" as="script"><link rel="preload" href="/WheelHub/assets/css/29.styles.2c9de4e8.css" as="style"><link rel="preload" href="/WheelHub/assets/js/29.2c9de4e8.js" as="script"><link rel="prefetch" href="/WheelHub/assets/css/0.styles.780cfe9b.css"><link rel="prefetch" href="/WheelHub/assets/css/10.styles.0d7437ac.css"><link rel="prefetch" href="/WheelHub/assets/css/11.styles.1da24efc.css"><link rel="prefetch" href="/WheelHub/assets/css/12.styles.7fdc0e9f.css"><link rel="prefetch" href="/WheelHub/assets/css/13.styles.a87ef03d.css"><link rel="prefetch" href="/WheelHub/assets/css/14.styles.14a4e558.css"><link rel="prefetch" href="/WheelHub/assets/css/15.styles.e7a173f9.css"><link rel="prefetch" href="/WheelHub/assets/css/16.styles.28001d31.css"><link rel="prefetch" href="/WheelHub/assets/css/17.styles.dd5d25d6.css"><link rel="prefetch" href="/WheelHub/assets/css/18.styles.8a95d1e7.css"><link rel="prefetch" href="/WheelHub/assets/css/19.styles.215e1000.css"><link rel="prefetch" href="/WheelHub/assets/css/2.styles.052a98e4.css"><link rel="prefetch" href="/WheelHub/assets/css/20.styles.6ebc7dad.css"><link rel="prefetch" href="/WheelHub/assets/css/21.styles.8edfd7e3.css"><link rel="prefetch" href="/WheelHub/assets/css/22.styles.bd3a2a1b.css"><link rel="prefetch" href="/WheelHub/assets/css/23.styles.2660e92e.css"><link rel="prefetch" href="/WheelHub/assets/css/24.styles.357b3f3d.css"><link rel="prefetch" href="/WheelHub/assets/css/30.styles.9234e93e.css"><link rel="prefetch" href="/WheelHub/assets/css/31.styles.2d1c080c.css"><link rel="prefetch" href="/WheelHub/assets/css/32.styles.bba5a79e.css"><link rel="prefetch" href="/WheelHub/assets/css/4.styles.4a8ab480.css"><link rel="prefetch" href="/WheelHub/assets/css/5.styles.bdc8dce9.css"><link rel="prefetch" href="/WheelHub/assets/css/6.styles.5d76f74a.css"><link rel="prefetch" href="/WheelHub/assets/css/7.styles.ed112fde.css"><link rel="prefetch" href="/WheelHub/assets/css/8.styles.da7ae729.css"><link rel="prefetch" href="/WheelHub/assets/css/9.styles.b51c9546.css"><link rel="prefetch" href="/WheelHub/assets/js/0.780cfe9b.js"><link rel="prefetch" href="/WheelHub/assets/js/10.0d7437ac.js"><link rel="prefetch" href="/WheelHub/assets/js/11.1da24efc.js"><link rel="prefetch" href="/WheelHub/assets/js/12.7fdc0e9f.js"><link rel="prefetch" href="/WheelHub/assets/js/13.a87ef03d.js"><link rel="prefetch" href="/WheelHub/assets/js/14.14a4e558.js"><link rel="prefetch" href="/WheelHub/assets/js/15.e7a173f9.js"><link rel="prefetch" href="/WheelHub/assets/js/16.28001d31.js"><link rel="prefetch" href="/WheelHub/assets/js/17.dd5d25d6.js"><link rel="prefetch" href="/WheelHub/assets/js/18.8a95d1e7.js"><link rel="prefetch" href="/WheelHub/assets/js/19.215e1000.js"><link rel="prefetch" href="/WheelHub/assets/js/2.052a98e4.js"><link rel="prefetch" href="/WheelHub/assets/js/20.6ebc7dad.js"><link rel="prefetch" href="/WheelHub/assets/js/21.8edfd7e3.js"><link rel="prefetch" href="/WheelHub/assets/js/22.bd3a2a1b.js"><link rel="prefetch" href="/WheelHub/assets/js/23.2660e92e.js"><link rel="prefetch" href="/WheelHub/assets/js/24.357b3f3d.js"><link rel="prefetch" href="/WheelHub/assets/js/30.9234e93e.js"><link rel="prefetch" href="/WheelHub/assets/js/31.2d1c080c.js"><link rel="prefetch" href="/WheelHub/assets/js/32.bba5a79e.js"><link rel="prefetch" href="/WheelHub/assets/js/33.610e7f17.js"><link rel="prefetch" href="/WheelHub/assets/js/34.8263920e.js"><link rel="prefetch" href="/WheelHub/assets/js/35.6cdc437d.js"><link rel="prefetch" href="/WheelHub/assets/js/36.ed03c20a.js"><link rel="prefetch" href="/WheelHub/assets/js/37.b09dd8d3.js"><link rel="prefetch" href="/WheelHub/assets/js/38.992186d9.js"><link rel="prefetch" href="/WheelHub/assets/js/39.5bfb1039.js"><link rel="prefetch" href="/WheelHub/assets/js/4.4a8ab480.js"><link rel="prefetch" href="/WheelHub/assets/js/40.7a517126.js"><link rel="prefetch" href="/WheelHub/assets/js/41.686c9b3b.js"><link rel="prefetch" href="/WheelHub/assets/js/42.c6650cb3.js"><link rel="prefetch" href="/WheelHub/assets/js/43.0518074d.js"><link rel="prefetch" href="/WheelHub/assets/js/44.fb1fa777.js"><link rel="prefetch" href="/WheelHub/assets/js/45.0047790c.js"><link rel="prefetch" href="/WheelHub/assets/js/46.3d9bc0f1.js"><link rel="prefetch" href="/WheelHub/assets/js/47.4c39bd76.js"><link rel="prefetch" href="/WheelHub/assets/js/48.37020c99.js"><link rel="prefetch" href="/WheelHub/assets/js/5.bdc8dce9.js"><link rel="prefetch" href="/WheelHub/assets/js/50.8ca5285a.js"><link rel="prefetch" href="/WheelHub/assets/js/51.bd3eda1a.js"><link rel="prefetch" href="/WheelHub/assets/js/52.3369a3ea.js"><link rel="prefetch" href="/WheelHub/assets/js/53.23b6bad3.js"><link rel="prefetch" href="/WheelHub/assets/js/54.ba73396e.js"><link rel="prefetch" href="/WheelHub/assets/js/55.109aca3f.js"><link rel="prefetch" href="/WheelHub/assets/js/56.f72a3d26.js"><link rel="prefetch" href="/WheelHub/assets/js/57.acb13755.js"><link rel="prefetch" href="/WheelHub/assets/js/58.7451be88.js"><link rel="prefetch" href="/WheelHub/assets/js/59.41309044.js"><link rel="prefetch" href="/WheelHub/assets/js/6.5d76f74a.js"><link rel="prefetch" href="/WheelHub/assets/js/7.ed112fde.js"><link rel="prefetch" href="/WheelHub/assets/js/8.da7ae729.js"><link rel="prefetch" href="/WheelHub/assets/js/9.b51c9546.js">
+    <link rel="stylesheet" href="/WheelHub/assets/css/styles.0d97a08f.css"><link rel="stylesheet" href="/WheelHub/assets/css/28.styles.931d63e6.css"><link rel="stylesheet" href="/WheelHub/assets/css/1.styles.395b269d.css"><link rel="stylesheet" href="/WheelHub/assets/css/26.styles.b9c852ff.css"><link rel="stylesheet" href="/WheelHub/assets/css/25.styles.d72e74ec.css"><link rel="stylesheet" href="/WheelHub/assets/css/27.styles.a830a20f.css"><link rel="stylesheet" href="/WheelHub/assets/css/29.styles.2c9de4e8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/WheelHub/" class="home-link router-link-active"><!----> <span class="site-name">WheelHub</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/WheelHub/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/Leslie-LiangGangwei/WheelHub/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>入门指南</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>组件展示</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/WheelHub/components/icon.html" class="sidebar-link">icon 图标</a></li><li><a href="/WheelHub/components/button.html" class="sidebar-link">Button 按钮</a></li><li><a href="/WheelHub/components/input.html" class="sidebar-link">Input 输入框</a></li><li><a href="/WheelHub/components/grid.html" aria-current="page" class="active sidebar-link">Grid 栅格</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#设计理念" class="sidebar-link">设计理念</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#引用" class="sidebar-link">引用</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#普通用法" class="sidebar-link">普通用法</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#适配-iphone-ipad-pc" class="sidebar-link">适配 iPhone / iPad / PC</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#设置-gutter" class="sidebar-link">设置 gutter</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#设置-offset" class="sidebar-link">设置 offset</a></li><li class="sidebar-sub-header"><a href="/WheelHub/components/grid.html#attributes" class="sidebar-link">Attributes</a></li></ul></li><li><a href="/WheelHub/components/layout.html" class="sidebar-link">Layout 布局</a></li><li><a href="/WheelHub/components/toast.html" class="sidebar-link">Toast 全局提示</a></li><li><a href="/WheelHub/components/tabs.html" class="sidebar-link">Tabs 标签页</a></li><li><a href="/WheelHub/components/popover.html" class="sidebar-link">Popover 气泡卡片</a></li><li><a href="/WheelHub/components/collapse.html" class="sidebar-link">Collapse 折叠面板</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="grid-栅格"><a href="#grid-栅格" class="header-anchor">#</a> Grid 栅格</h1> <blockquote><p>24 栅格系统</p></blockquote> <h2 id="设计理念"><a href="#设计理念" class="header-anchor">#</a> 设计理念</h2> <blockquote><p>布局的栅格化系统，我们是基于行 <code>row</code> 和列 <code>col</code> 来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：</p></blockquote> <ul><li><p>通过 <code>row</code> 在水平方向建立一组 <code>column</code>（简写 col）。</p> <ul><li><p>你的内容应当放置于 <code>col</code> 内，并且，只有 <code>col</code> 可以作为 <code>row</code> 的直接元素。</p></li> <li><p>栅格系统中的列是指 <code>1 - 24</code> 的值来表示其跨越的范围。</p></li></ul></li> <li><p>我们的栅格化系统基于 Flex 布局</p> <ul><li>允许子元素在父节点内的水平对齐方式 - 居中（默认）、居左、居右</li></ul></li></ul> <h2 id="引用"><a href="#引用" class="header-anchor">#</a> 引用</h2> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import {Row, Col} from 'wheelhub'
+
+new Vue({
+    el: '#app',
+    components: {
+        'g-row': Row,
+        'g-col': Col
+    }
+})
+</code></pre></div><h2 id="普通用法"><a href="#普通用法" class="header-anchor">#</a> 普通用法</h2> <p></p> <div data-v-707dba40><div class="row demoRow justify-center" data-v-22f0707f data-v-707dba40><div class="col col-8" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>8</div></div> <div class="col col-8" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>8</div></div> <div class="col col-8" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>8</div></div></div> <div class="row demoRow justify-center" data-v-22f0707f data-v-707dba40><div class="col col-6" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>6</div></div></div> <div class="row demoRow justify-center" data-v-22f0707f data-v-707dba40><div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>4</div></div></div> <div class="row demoRow justify-center" data-v-22f0707f data-v-707dba40><div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-707dba40><div class="demoCol" data-v-90b8f14a data-v-707dba40>2</div></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot;&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot;&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot;&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot;&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+    
+&lt;style scoped&gt;
+    * { box-sizing: border-box; }
+
+    .demoRow { margin: 10px 0; }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+&lt;/style&gt;
+</code></pre></div><h2 id="适配-iphone-ipad-pc"><a href="#适配-iphone-ipad-pc" class="header-anchor">#</a> 适配 iPhone / iPad / PC</h2> <blockquote><p>iPhone 界面下，<code>g-col</code> 栅格空间为 4，</p> <p>iPad 界面下，<code>g-col</code> 栅格空间为 8，</p> <p>PC 界面下，<code>g-col</code> 栅格空间为 24。</p></blockquote> <p></p> <div data-v-ff6156e2><div class="row demoRow justify-center" data-v-22f0707f data-v-ff6156e2><div class="col col-4 col-ipad-8 col-pc-24" data-v-90b8f14a data-v-ff6156e2><div class="demoCol" data-v-90b8f14a data-v-ff6156e2>8</div></div> <div class="col col-4 col-ipad-8 col-pc-24" data-v-90b8f14a data-v-ff6156e2><div class="demoCol" data-v-90b8f14a data-v-ff6156e2>8</div></div> <div class="col col-4 col-ipad-8 col-pc-24" data-v-90b8f14a data-v-ff6156e2><div class="demoCol" data-v-90b8f14a data-v-ff6156e2>8</div></div> <div class="col col-4 col-ipad-8 col-pc-24" data-v-90b8f14a data-v-ff6156e2><div class="demoCol" data-v-90b8f14a data-v-ff6156e2>8</div></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot;&gt;
+    &lt;g-col span=&quot;4&quot; :ipad=&quot;{span:'8'}&quot; :pc=&quot;{span: '24'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot; :ipad=&quot;{span:'8'}&quot; :pc=&quot;{span: '24'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot; :ipad=&quot;{span:'8'}&quot; :pc=&quot;{span: '24'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+    &lt;g-col span=&quot;4&quot; :ipad=&quot;{span:'8'}&quot; :pc=&quot;{span: '24'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;style scoped&gt;
+    * { box-sizing: border-box; }
+
+    .demoRow { margin: 10px 0; }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+&lt;/style&gt;
+</code></pre></div><h2 id="设置-gutter"><a href="#设置-gutter" class="header-anchor">#</a> 设置 gutter</h2> <h3 id="gutter-16"><a href="#gutter-16" class="header-anchor">#</a> gutter=&quot;16&quot;</h3> <p></p> <div data-v-024ab5dc><div class="row demoRow justify-center gutter-16" data-v-22f0707f data-v-024ab5dc><div class="col col-8" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>8</div></div> <div class="col col-8" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>8</div></div> <div class="col col-8" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>8</div></div></div> <div class="row demoRow justify-center gutter-16" data-v-22f0707f data-v-024ab5dc><div class="col col-6" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>6</div></div> <div class="col col-6" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>6</div></div></div> <div class="row demoRow justify-center gutter-16" data-v-22f0707f data-v-024ab5dc><div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div> <div class="col col-4" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>4</div></div></div> <div class="row demoRow justify-center gutter-16" data-v-22f0707f data-v-024ab5dc><div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div> <div class="col col-2" data-v-90b8f14a data-v-024ab5dc><div class="demoCol" data-v-90b8f14a data-v-024ab5dc>2</div></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot; gutter=&quot;16&quot;&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;8&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;16&quot;&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;6&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;6&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;16&quot;&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+&lt;g-row class=&quot;demoRow&quot; gutter=&quot;16&quot;&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;2&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;2&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;style scoped&gt;
+    * { box-sizing: border-box; }
+
+    .demoRow { margin: 10px 0; }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+&lt;/style&gt;
+</code></pre></div><h3 id="gutter-iphone-0-ipad-32-pc-8"><a href="#gutter-iphone-0-ipad-32-pc-8" class="header-anchor">#</a> gutter=&quot;{iphone:'0', ipad:'32', pc:'8'}&quot;</h3> <blockquote><p>iPhone 界面下，<code>gutter</code> 为 0px，</p> <p>iPad 界面下，<code>gutter</code> 为 32px，</p> <p>PC 界面下，<code>gutter</code> 为 8px。</p></blockquote> <p></p> <div data-v-35feea2e><div class="row demoRow justify-center gutter-iphone-0 gutter-ipad-32 gutter-pc-8" data-v-22f0707f data-v-35feea2e><div class="col col-24 col-ipad-12 col-pc-8" data-v-90b8f14a data-v-35feea2e><div class="demoCol" data-v-90b8f14a data-v-35feea2e>8</div></div> <div class="col col-24 col-ipad-12 col-pc-8" data-v-90b8f14a data-v-35feea2e><div class="demoCol" data-v-90b8f14a data-v-35feea2e>8</div></div> <div class="col col-24 col-ipad-12 col-pc-8" data-v-90b8f14a data-v-35feea2e><div class="demoCol" data-v-90b8f14a data-v-35feea2e>8</div></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot; :gutter=&quot;{iphone:'0', ipad:'32', pc:'8'}&quot;&gt;
+    &lt;g-col span=&quot;24&quot; :ipad=&quot;{span:'12'}&quot; :pc=&quot;{span: '8'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+    &lt;g-col span=&quot;24&quot; :ipad=&quot;{span:'12'}&quot; :pc=&quot;{span: '8'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+    &lt;g-col span=&quot;24&quot; :ipad=&quot;{span:'12'}&quot; :pc=&quot;{span: '8'}&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;8&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;style scoped&gt;
+    * { box-sizing: border-box; }
+
+    .demoRow { margin: 10px 0; }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+&lt;/style&gt;
+</code></pre></div><h2 id="设置-offset"><a href="#设置-offset" class="header-anchor">#</a> 设置 offset</h2> <p></p> <div data-v-611208ec><div class="row demoRow justify-center" data-v-22f0707f data-v-611208ec><div class="col col-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>4</div></div> <div class="col col-4 offset-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>span=&quot;4&quot; offset=&quot;4&quot;</div></div> <div class="col col-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>4</div></div> <div class="col col-4 offset-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>span=&quot;4&quot; offset=&quot;4&quot;</div></div> <div class="col col-4 offset-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>span=&quot;4&quot; offset=&quot;4&quot;</div></div> <div class="col col-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>4</div></div> <div class="col col-4 offset-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>span=&quot;4&quot; offset=&quot;4&quot;</div></div> <div class="col col-4" data-v-90b8f14a data-v-611208ec><div class="demoCol" data-v-90b8f14a data-v-611208ec>4</div></div></div></div> <p></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;g-row class=&quot;demoRow&quot;&gt;
+  &lt;g-col span=&quot;4&quot; &gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;span=&quot;4&quot; offset=&quot;4&quot;&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; &gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;span=&quot;4&quot; offset=&quot;4&quot;&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;span=&quot;4&quot; offset=&quot;4&quot;&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; &gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; offset=&quot;4&quot;&gt;&lt;div class=&quot;demoCol&quot;&gt;span=&quot;4&quot; offset=&quot;4&quot;&lt;/div&gt;&lt;/g-col&gt;
+  &lt;g-col span=&quot;4&quot; &gt;&lt;div class=&quot;demoCol&quot;&gt;4&lt;/div&gt;&lt;/g-col&gt;
+&lt;/g-row&gt;
+
+&lt;style scoped&gt;
+    * { box-sizing: border-box; }
+
+    .demoRow { margin: 10px 0; }
+
+    .demoCol {
+        height: 50px;
+        border: 1px solid #ccc;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+&lt;/style&gt;
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <h3 id="row"><a href="#row" class="header-anchor">#</a> Row</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>gutter</td> <td>栅格间隔</td> <td>[String, Number, Object]</td> <td>8 / {iphone:8, ipad:16, narrowPc:24, pc:32} 建议为 8 的倍数</td> <td>0</td></tr> <tr><td>justify</td> <td>水平排列方式</td> <td>String</td> <td>left / right / center</td> <td>center</td></tr></tbody></table> <h3 id="col"><a href="#col" class="header-anchor">#</a> Col</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>span</td> <td>栅格占位格数（默认为：iphone 尺寸 <code>&lt;576px</code>)</td> <td>[String, Number]</td> <td>----</td> <td>----</td></tr> <tr><td>offset</td> <td>栅格左侧间隔格数（默认为：iphone 尺寸 <code>&lt;576px</code>)</td> <td>[String, Number]</td> <td>----</td> <td>----</td></tr> <tr><td>ipad</td> <td>屏幕 &gt;= <code>576px</code>，设置 <code>span</code>和<code>offset</code>的对象</td> <td>[Object]</td> <td>----</td> <td>----</td></tr> <tr><td>pc</td> <td>屏幕 &gt;= <code>992px</code>，设置 <code>span</code>和<code>offset</code>的对象</td> <td>[Object]</td> <td>----</td> <td>----</td></tr> <tr><td>widePc</td> <td>屏幕 &gt;= <code>1200px</code>，设置 <code>span</code>和<code>offset</code>的对象</td> <td>[Object]</td> <td>----</td> <td>----</td></tr> <tr><td>biggestWidePc</td> <td>屏幕 &gt;= <code>1600px</code>，设置 <code>span</code>和<code>offset</code>的对象</td> <td>[Object]</td> <td>----</td> <td>----</td></tr></tbody></table></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/WheelHub/components/input.html" class="prev">
+          Input 输入框
+        </a></span> <span class="next"><a href="/WheelHub/components/layout.html">
+          Layout 布局
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/WheelHub/assets/js/app.0d97a08f.js" defer></script><script src="/WheelHub/assets/js/49.ebd9310b.js" defer></script><script src="/WheelHub/assets/js/28.931d63e6.js" defer></script><script src="/WheelHub/assets/js/1.395b269d.js" defer></script><script src="/WheelHub/assets/js/26.b9c852ff.js" defer></script><script src="/WheelHub/assets/js/25.d72e74ec.js" defer></script><script src="/WheelHub/assets/js/27.a830a20f.js" defer></script><script src="/WheelHub/assets/js/29.2c9de4e8.js" defer></script>
+  </body>
+</html>
