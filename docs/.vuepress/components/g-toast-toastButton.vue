@@ -1,6 +1,6 @@
 <template>
   <div>
-    <g-button @click="showToast">Toast 设置关闭按钮</g-button>
+    <g-button @click="showToast">Toast 执行回调函数</g-button>
   </div>
 </template>
 

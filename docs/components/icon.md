@@ -3,7 +3,7 @@ title: icon 图标
 ---
 
 # icon 图标
-> icon 作为 WheelHub 最简单的组件，推荐使用 iconfont SVG 利于维护，提高性能。
+> icon 作为 WheelHub 最简单的组件，推荐使用 iconfont SVG 既利于维护，又能提高性能。
 
 ## 引用
 ### iconfont.js 引用
@@ -14,7 +14,7 @@ title: icon 图标
 import "../iconfont.js";
 ```
 
-#### 2. 或者在 `index.html`
+#### 2. 或者在 `index.html` 引用
 ```
 <script src="./src/icon/iconfont.js"></script>
 ```

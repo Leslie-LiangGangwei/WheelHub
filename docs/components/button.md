@@ -3,7 +3,7 @@ title: Button 按钮
 ---
 
 # Button 按钮
-> Button 作为最常用的操作组件。
+> Button 作为较为常用的操作组件
 
 ## 引用
 ```

@@ -34,7 +34,7 @@ new Vue({
 <g-toast-top></g-toast-top><g-toast-bottom></g-toast-bottom><g-toast-middle></g-toast-middle>
 </div>
 
-### 默认定位（Top）
+### Top 定位（默认）
 
 ```
 <style>
@@ -176,7 +176,7 @@ new Vue({
 })
 ```
 
-## 可配置回调函数 & 设置 toastButton
+## 可配置回调函数 & 设置 toastButton 文案
 
 <p></p>
 <g-toast-toastButton></g-toast-toastButton>

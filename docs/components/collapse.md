@@ -114,11 +114,11 @@ new Vue({
 ### Collapse
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
-| single | 判断 collapse 是否只展开"单个" | Boolean | true / false | false |
-| selected | 设置 collapse 默认展开项 | Array | ---- | [] |
+| single | 判断 Collapse-item 是否只展开"单个" | Boolean | true / false | false |
+| selected | 设置 Collapse 默认展开项 | Array | ---- | [] |
 
 ### Collapse-item
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
 | title | Collapse-item 标题（必填项） | String | ---- | ---- |
-| name | 对应 selected（必填项） | String | ---- | ---- |
+| name | 对应 Selected（必填项） | String | ---- | ---- |
