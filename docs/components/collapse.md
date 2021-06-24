@@ -121,4 +121,4 @@ new Vue({
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
 | title | Collapse-item 标题（必填项） | String | ---- | ---- |
-| name | 对应 Selected（必填项） | String | ---- | ---- |
+| name | 对应 selected（必填项） | String | ---- | ---- |

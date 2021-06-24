@@ -99,7 +99,7 @@ new Vue({
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- | 
 | disabled | Tabs-item 是否能点击 | Boolean | true / false | false | 
-| name | 对应 Selected(必填) | [String, Number] | ---- | ---- | 
+| name | 对应 selected(必填) | [String, Number] | ---- | ---- | 
 
 #### Tabs-panel
 
