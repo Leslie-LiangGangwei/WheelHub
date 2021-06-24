@@ -1,5 +1,6 @@
 module.exports = {
     title: 'WheelHub',
+    base: '/WheelHub/',
     description: '基于 VUE2 搭建的 UI 框架',
     chainWebpack: config => {
         config.resolve.alias.set('core-js/library/fn', 'core-js/features')
